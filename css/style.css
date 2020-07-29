@@ -1,6 +1,4 @@
 html {
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -8,14 +6,13 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  width: 1008px;
   margin: 0 auto;
+  padding: 24px;
+  overflow: visible;
+  width: 1008px;
   font-size: 14px;
   font-family: "Arial";
   line-height: 22px;
-  overflow: visible;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 .wrap {
