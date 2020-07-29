@@ -13,6 +13,7 @@ body {
   font-size: 14px;
   font-family: "Arial";
   line-height: 22px;
+  /* border: solid; */
 }
 
 .wrap {
@@ -25,14 +26,8 @@ body {
 }
 
 .head {
+  position: static;
   flex: 0 0 auto;
-}
-
-.content {
-  flex: 1;
-
-  display: flex;
-  flex-direction: row;
 }
 
 header {
@@ -42,27 +37,42 @@ header {
 
 .logo {
   position: absolute;
+  /* top: 0;
+  left: 0; */
   width: 122px;
   height: 108px;
 }
 
 .contact {
   position: absolute;
-  left: 145px;
-  width: 279px;
+  top: 0;
+  left: 144px;
+  width: 280px;
   height: 108px;
   background-color: #777777;
 }
 
 .more {
   position: absolute;
-  padding: 21px;
-  left: 447px;
-  width: 513px;
+  top: 0;
+  left: 446px;
+  width: 514px;
   height: 108px;
+  box-sizing: border-box;
+  padding: 21px;
   background-color: #777777;
   text-align: right;
 }
+
+.content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: row;
+}
+
+
+
 
 a {
   color: #fff;
