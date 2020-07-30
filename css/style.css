@@ -1,15 +1,12 @@
-html {
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  margin: 0 auto;
-  /* padding: 24px; */
-  overflow: visible;
   width: 1008px;
+  margin: 0 auto;
   font-size: 14px;
   font-family: "Arial";
   line-height: 22px;
@@ -17,16 +14,18 @@ body {
 
 .wrap {
   margin: 0 auto;
-  flex: 1 0 auto;
-  flex-direction: column;
-  display: flex;
+  width: 960px;
+  overflow: visible;
   min-height: 100%;
-  padding: 24px 24px 0 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header {
   position: relative;
-  width: 960px;
+  margin-top: 24px;
+  width: 100%;
   height: 108px;
   flex: 0 0 auto;
 }
@@ -39,7 +38,7 @@ header {
   height: 108px;
 }
 
-.block_2{
+.block_2 {
   position: absolute;
   top: 0;
   left: 144px;
@@ -61,14 +60,13 @@ header {
 }
 
 .content {
-  position: relative;
-  width: 960px;
-  height: 100px;
-  background-color: red;
-  /* flex: 1;
+  flex: 1 0 auto;
+  width: 100%;
 
   display: flex;
-  flex-direction: row; */
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
 }
 
 a {
@@ -99,48 +97,61 @@ ul a, .tel {
 }
 
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0 20px 0;
 }
 
-.left {
-  width: 184px;
-  flex: 0 0 auto;
+.content_row {
+  flex: 1 0 auto;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   min-height: 100%;
 }
 
-.nav {
-  flex 1;
-  height: 100%;
+.left {
+  flex: 0 0 auto;
+  width: 184px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-nav {
+.block_4 {
+  flex: 0 0 auto;
+  width: 100%;
   background-color: #777777;
-  padding: 20px 0px 20px 13px;
+  line-height: 14px;
 }
 
-.lower{
+.left_filler {
+  flex: 1 0 auto;
+  width: 100%
+}
+
+.block_7{
   flex: 0 0 auto;
   width: 184px;
   height: 134px;
 }
 
-main {
-  flex: 1 1 auto;
-  margin-left: 21px;
-  width: 100%;
+.content_row_filler {
+  flex: 1 0 auto;
 }
 
-.top {
+main {
+  width: 754px;
+  flex: 0 0 auto;
+}
+
+.block_5 {
   background-color: #dcdcdc;
   padding: 20px 0 23px 23px;
   color: #777777;
 }
 
-.gitem {
+.block_6 {
   float: left;
   margin-top: 20px;
   margin-left: 21px;
@@ -148,33 +159,39 @@ main {
   height: 152px;
 }
 
-.gitem:nth-child(5n+1), .gitem:first-child {
+.block_6:nth-child(5n+1), .block_6:first-child {
   margin-left: 0;
 }
 
 .bottom {
   clear: both;
-  margin-top: 20px;
+  padding-top: 18px;
 }
 
-.block_8, .block_9 {
+.block_8 {
+  box-sizing: border-box;
+  float: left;
   width: 370px;
   background-color: #dcdcdc;
-  float: left;
   color: #777777;
   min-height: 200px;
-  margin-top: 20px;
   padding: 20px 20px 23px 23px;
 }
+
 .block_9 {
+  box-sizing: border-box;
   float: right;
+  width: 370px;
+  background-color: #dcdcdc;
+  color: #777777;
+  min-height: 200px;
+  padding: 20px 20px 23px 23px;
 }
 
 footer {
   position: relative;
-  margin: 0 auto;
-  padding-bottom: 24px;
-  width: 960px;
+  margin-bottom: 24px;
+  width: 100%;
   min-height: 180px;
   flex: 0 0 auto;
 }
@@ -183,6 +200,7 @@ footer {
   position: absolute;
   left: 0;
   top: 0;
+  margin-bottom: 24px;
   width: 300px;
   min-height: 180px;
   background-color: #777777;
@@ -195,7 +213,7 @@ footer {
   column-width: 124px;
   column-gap: 5px;
   margin: 0;
-  padding: 13px 20px 0px 25px;
+  padding: 13px 20px 13px 25px;
   list-style-type: none;
 }
 
@@ -203,6 +221,7 @@ footer {
   position: absolute;
   left: 326px;
   top: 0;
+  margin-bottom: 24px;
   width: 300px;
   min-height: 180px;
   background-color: #777777;
@@ -221,6 +240,7 @@ footer {
   top: 0;
   width: 308px;
   height: 80px;
+  background-color: #777777;
 }
 
 .block_13 {
