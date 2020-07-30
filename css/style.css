@@ -103,9 +103,12 @@ ul a, .tel {
 block_4_li {
   line-height: 22px;
 }
-.hmain {
+
+.block_5_h2 {
   color: #777777;
   font-weight: 800;
+  font-size: 14px;
+  line-height: 22px;
 }
 
 hr {
