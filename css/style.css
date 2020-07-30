@@ -77,12 +77,12 @@ ul a, .tel {
   text-decoration: none;
 }
 
-.lmain {
+.block_5_ul {
   list-style-type: square;
   padding-left: 40px;
 }
 
-.smain {
+.block_5_span {
   font-weight: bold;
 }
 
@@ -98,10 +98,6 @@ ul a, .tel {
   padding: 0;
   list-style-type: none;
   font-weight: 100;
-}
-
-block_4_li {
-  line-height: 22px;
 }
 
 .block_5_h2 {
@@ -222,7 +218,7 @@ footer {
   line-height: 22px;
 }
 
-.u10 {
+.block_10_ul {
   column-count: 2;
   column-width: 124px;
   column-gap: 5px;
@@ -242,9 +238,9 @@ footer {
   color: #fff;
 }
 
-.flmiddle {
+.block_11_ul {
   margin: 0;
-  padding: 13px 0px 0px 35px;
+  padding: 12px 0px 0px 40px;
   list-style-type: square;
 }
 
