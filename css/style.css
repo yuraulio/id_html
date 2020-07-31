@@ -241,7 +241,17 @@ footer {
 .block_11_ul {
   margin: 0;
   padding: 12px 0px 0px 40px;
-  list-style-type: square;
+  list-style-type: none;
+}
+
+.block_11_li:before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 6px;
+    vertical-align: middle;
+    background-color: #fff;
 }
 
 .block_12 {
