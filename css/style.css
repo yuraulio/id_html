@@ -1,0 +1,83 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/OpenSansCondensed-Light.ttf');
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0 auto;
+  padding: 10px;
+  height: 100%;
+  /* width: 1000px; */
+  font-family: "PT Sans";
+  font-size: 14px;
+  line-height: 22px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  height: 230px;
+  background-color: #dcdcdc;
+  flex: 0 0 auto;
+  font-family: 'Open Sans Condensed';
+  font-size: 22px;
+}
+
+.middle {
+  height: 100%;
+  flex: 1 0 auto;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav_main {
+  height: 80px;
+  background-color: #777777;
+  flex: 0 0 auto;
+}
+
+.slider {
+  height: 150px; /*Зробити тут 400px*/
+  background-color: #dcdcdc;
+  flex: 0 0 auto;
+}
+
+.content {
+  margin: 0 auto;
+  width: 980px;
+  height: 100%;
+  flex: 0 0 auto;
+}
+
+aside {
+  float: left;
+  width: 350px;
+  height: 560px;
+  background-color: #777777;
+}
+
+main {
+  float: right;
+  width: 630px;
+}
+
+.middle_filler {
+  flex: 1 0 auto;
+}
+
+footer {
+  height: 220px;
+  background-color: #777777;
+  flex: 0 0 auto;
+}
