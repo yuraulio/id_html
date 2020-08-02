@@ -218,6 +218,52 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto 10px 0;
+  margin: 50px 10px 0;
   width: 980px;
+}
+
+.footer_left {
+  width: 350px;
+  height: 220px;
+  flex: 0 0 auto;
+}
+
+.footer_left p {
+  margin: 0;
+  color: #fff;
+}
+
+.footer_right {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 0 0 auto;
+  width: 630px;
+  height: 220px;
+  flex: 0 0 auto;
+}
+
+.footer_right_menu {
+
+}
+
+.footer_right ul {
+  margin: 0;
+  padding: 0;
+}
+.footer_right_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 0 0 auto;
+}
+
+.footer_right_logo img {
+ margin-right: 8px;
+}
+
+.footer_right_logo p {
+  margin: -5px 0 0;
+  float: right;
+  color: #fff;
 }
