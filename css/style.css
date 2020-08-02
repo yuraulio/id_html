@@ -201,10 +201,12 @@ main h2 {
 
 main p {
   padding-left: 60px;
-  text-align: justify;
 }
 
 footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   margin: auto 0 0;
   width: inherit;
   min-height: 220px;
@@ -212,7 +214,10 @@ footer {
   background-color: #777777;
 }
 
-  /*
-  Розміри зображення зі слайдера
-  width: 1248px;
-  height: 462px; */
+.footer_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto 10px 0;
+  width: 980px;
+}
