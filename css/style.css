@@ -10,7 +10,6 @@
   font-weight: normal;
 }
 html {
-  width: 100%;
   height: 100%;
 }
 
@@ -19,42 +18,40 @@ body {
   flex-direction: column;
   justify-content: space-between;
   margin: 0;
-  width: inherit;
   height: inherit;
   font-family: "PT Sans";
   font-size: 14px;
   line-height: 22px;
   color: #777777;
 }
+
  a {
    color: #fff;
  }
 
-header {
-  display: flex;
-  justify-content: center;
+header { /*Блок хедера*/
+  display: flex; /*Щоб .header_row центрувався вертикально*/
   min-height: 230px;
   background-color: #dcdcdc;
 }
 
 .header_row {
   display: flex;
-  flex-direction: row;
-  margin: auto 10px;
-  width: 980px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 1000px;
+
 }
 
 .header_left {
-  margin: auto auto auto 0;
   display: flex;
   align-items: center;
 }
 
 .header_right {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin: auto 0 auto auto;
+  margin: auto 0 auto auto; /*Щоб при видаленні header_left лишався на місці*/
 }
 
 .header_right p {
@@ -63,32 +60,27 @@ font-size: 40px;
 line-height: 46px;
 }
 
-.nav_main {
+.nav_main { /*Блок меню*/
   display: flex;
-  justify-content: center;
-  margin: 0 0 auto;
+  flex: 0 0 auto; /*Щоб при додаванні пунктів меню блок розширювався*/
   min-height: 80px;
-  flex: 0 0 auto;
   background-color: #777777;
 }
 
 .nav_main_row {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin: auto 10px;
-  width: 980px;
+  margin: 0 auto;
+  padding: 0 10px;
+  width: 1000px;
 }
 
 .nav_main ul {
   display: inline-flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*При додаванні елементів розширює блок, а не показує за межами*/
   justify-content: center;
   padding: 0;
   list-style-type: none;
-  text-align: center;
 }
 
 .nav_main ul li {
@@ -120,39 +112,24 @@ line-height: 46px;
   text-decoration: underline;
 }
 
-.slider {
-  display: flex;
-  justify-content: center;
-  margin: 0 0 auto;
-  height: 400px;
-  flex: 0 0 auto;
-  background-color: #f8f8f8;
-  background-image: url("../images/slider.png");
-  background-repeat: no-repeat;
-  background-position: center;
+.slider { /*Блок слайдера*/
+  min-height: 400px;
+  background: #f8f8f8 url("../images/slider.png") center center no-repeat;
 }
 
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 0 auto;
-  flex: 1 0 auto;
+.content { /*Блок контенту*/
 }
 
 .content_row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 30px 10px 195px;
-  min-height: 785px;
-  width: 980px;
+  margin: 0 auto;
+  padding:30px 10px 195px;
+  width: 1000px;
 }
 
 aside {
   margin: 0 auto auto 0;
   width: 350px;
-  flex: 0 0 auto;
   background-color: #777777;
 }
 
@@ -190,42 +167,32 @@ aside {
 main {
   margin: 0 0 0 auto;
   width: 630px;
-  flex: 0 0 auto;
 }
 
 main h2 {
-  padding-left: 60px;
+  padding-left: 40px;
   font-size: 40px;
   font-weight: 100;
 }
 
 main p {
-  padding-left: 60px;
+  padding-left: 40px;
 }
 
-footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: auto 0 0;
-  width: inherit;
-  min-height: 220px;
-  flex: 0 0 auto;
+footer { /*Блок футера*/
+  margin: auto 0 0 0; /*Для того, щоб блоки притискались куди треба при видалення*/
   background-color: #777777;
 }
 
 .footer_row {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 50px 10px 0;
-  width: 980px;
+  margin: 0px auto;
+  padding: 50px 10px;
+  width: 1000px;
 }
 
 .footer_left {
   width: 350px;
-  height: 220px;
-  flex: 0 0 auto;
 }
 
 .footer_left p {
@@ -235,16 +202,8 @@ footer {
 
 .footer_right {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   margin: 0 0 0 auto;
   width: 630px;
-  height: 220px;
-  flex: 0 0 auto;
-}
-
-.footer_right_menu {
-
 }
 
 .footer_right ul {
@@ -253,8 +212,6 @@ footer {
 }
 .footer_right_logo {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     margin: 0 0 0 auto;
 }
 
@@ -263,7 +220,6 @@ footer {
 }
 
 .footer_right_logo p {
-  margin: -5px 0 0;
-  float: right;
+  margin: -5px 34px 0 0;
   color: #fff;
 }
