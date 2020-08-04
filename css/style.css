@@ -118,9 +118,6 @@ line-height: 46px;
 }
 
 .content { /*Блок контенту*/
-}
-
-.content_row {
   display: flex;
   margin: 0 auto;
   padding:30px 10px 195px;
