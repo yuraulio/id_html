@@ -187,39 +187,34 @@ footer { /*Блок футера*/
 .footer_row {
   display: flex;
   margin: 0px auto;
-  padding: 50px 10px;
+  padding: 45px 10px;
   width: 1000px;
 }
 
-.footer_left {
+.footer_copyright {
   width: 350px;
 }
 
-.footer_left p {
+.footer_copyright p {
   margin: 0;
   color: #fff;
 }
 
-.footer_right {
-  display: flex;
-  margin: 0 0 0 auto;
-  width: 630px;
-}
-
-.footer_right ul {
+.footer_menu ul {
   margin: 0;
   padding: 0;
+  line-height: 26px;
 }
-.footer_right_logo {
+.footer_devs {
     display: flex;
     margin: 0 0 0 auto;
 }
 
-.footer_right_logo img {
+.footer_devs img {
  margin-right: 8px;
 }
 
-.footer_right_logo p {
+.footer_devs p {
   margin: -5px 34px 0 0;
   color: #fff;
 }
