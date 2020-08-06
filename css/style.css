@@ -113,8 +113,53 @@ line-height: 46px;
 }
 
 .slider { /*Блок слайдера*/
+  position: relative;
   min-height: 400px;
-  background: #f8f8f8 url("../images/slider.png") center center no-repeat;
+}
+
+.slide_1 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: 1s;
+  background: #f8f8f8 url("../images/slider/01.png") center center no-repeat;
+}
+
+.slide_2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  top: -400px;
+  z-index: 2;
+  transition: 1s;
+  background: #f8f8f8 url("../images/slider/02.png") center center no-repeat;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.slider_left_button {
+  position: absolute;
+  top: 166px;
+  left: 50%;
+  transform: translate(-485px,0);
+  width: 34px;
+  height: 61px;
+  z-index: 3;
+  background-image: url('../images/slider/left_button.png');
+}
+
+.slider_right_button {
+  position: absolute;
+  top: 166px;
+  left: 50%;
+  transform: translate(435px,0);
+  width: 34px;
+  height: 61px;
+  z-index: 4;
+  background-image: url('../images/slider/right_button.png');
 }
 
 .content { /*Блок контенту*/
