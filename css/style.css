@@ -50,14 +50,27 @@ header { /*Блок хедера*/
 
 .header_right {
   display: flex;
-  align-items: center;
-  margin: auto 0 auto auto; /*Щоб при видаленні header_left лишався на місці*/
+  flex-direction: column;
+  align-items: flex-end;
+  margin: auto 0 70px auto; /*Щоб при видаленні header_left лишався на місці*/
 }
 
-.header_right p {
+.header_right p span{
 font-family: 'Open Sans Condensed';
 font-size: 40px;
 line-height: 46px;
+}
+
+.header_right p a {
+  color: #777777;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration-style: dashed;
+  padding-left: 20px;
+}
+.header_right p {
+  margin: 12px 0 0;
 }
 
 .nav_main { /*Блок меню*/
@@ -163,52 +176,73 @@ line-height: 46px;
 }
 
 .content { /*Блок контенту*/
-  display: flex;
+  /* display: flex; */
   margin: 0 auto;
-  padding:30px 10px 195px;
   width: 1000px;
 }
 
 aside {
+  float: left;
   margin: 0 auto auto 0;
-  width: 350px;
-  background-color: #777777;
+  width: 200px;
+  box-sizing: border-box;
+  padding-top: 10px;
+}
+.breadcrumbs {
 }
 
-.content aside ul {
-  padding-left: 34px;
-  list-style-type: none;
-}
-.content aside h2 {
-  font-size: 40px;
-  line-height: 34px;
-  margin-top: 21px;
-  margin-bottom: 38px;
-  padding-left: 34px;
-  color: #fff;
+.breadcrumbs nav ul {
+  margin: 0;
+  padding: 0;
 }
 
-.content aside li {
-  padding-bottom: 30px;
+
+.breadcrumbs nav li {
+  display: inline;
+  color: #767676;
+  line-height: 30px;
 }
 
-.content aside li a {
+.breadcrumbs nav li::after {
+  content: '/';
+  margin:0 10px 0 7px;
+}
+
+.breadcrumbs nav ul li:last-child::after {
+  display: none;
+}
+
+.breadcrumbs ul a {
+  color: #767676;
+}
+
+.breadcrumbs nav ul li:last-child a {
   text-decoration: none;
 }
 
-.content aside li span {
-  font-style: italic;
+aside ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+aside ul li {
+  font-size: 18px;
 }
 
-.content aside p {
-  margin-right: 54px;
-  margin-bottom: 100px;
-  text-align: right;
+aside ul a {
+  color: #767676;
+  text-decoration: none;
+  line-height: 32px;
+}
+
+aside ul a:hover {
+  text-decoration: underline;
 }
 
 main {
+  float: right;
   margin: 0 0 0 auto;
-  width: 630px;
+  width: 780px;
 }
 
 main h2 {
@@ -248,8 +282,8 @@ footer { /*Блок футера*/
   line-height: 26px;
 }
 .footer_devs {
-    display: flex;
-    margin: 0 0 0 auto;
+  display: flex;
+  margin: 0 0 0 auto;
 }
 
 .footer_devs img {
@@ -259,4 +293,89 @@ footer { /*Блок футера*/
 .footer_devs p {
   margin: -5px 34px 0 0;
   color: #fff;
+}
+.feedback_background {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 10;
+  transition: 1s;
+}
+
+.feedback_close {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(233px,-316px);
+  width: 27px;
+  height: 27px;
+  background: #777777 url('../images/close.png') center center no-repeat;
+}
+
+.feedback {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-233px,-289px);
+  background-color: white;
+}
+
+.feedback fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  width: 466px;
+  height: 578px;
+  border: none;
+}
+
+.feedback legend {
+  margin: 30px auto;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.feedback label {
+  margin: 0 auto 10px;
+  text-align: center;
+}
+
+.feedback input {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c3c3c3;
+  width: 343px;
+  height: 44px;
+  padding: 0 10px;
+  margin-top: 3px;
+}
+
+.feedback textarea {
+  width: 343px;
+  height: 144px;
+  resize: none;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c3c3c3;
+  padding: 0 10px;
+  margin-top: 3px;
+
+}
+
+.feedback_send {
+  margin-top: 5px !important;
+  width: 128px !important;
+  height: 42px !important;
+  background-color: #777777;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: white;
 }

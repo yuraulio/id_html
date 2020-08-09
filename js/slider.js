@@ -5,13 +5,13 @@ function slideIt() {
 }
 
 for (let item of document.getElementsByClassName('slider_buttons')) {
-  item.onmousedown = function() {
+  item.onmousedown = ()=>{
     event.target.style.opacity = 0.4;
     slideIt();
     clearInterval(timer);
     timer = setInterval(slideIt, 4000);
   }
-  item.onmouseup = function() {
+  item.onmouseup = ()=>{
     event.target.style.opacity = 1;
   }
 }

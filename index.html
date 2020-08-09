@@ -14,8 +14,13 @@
         </div>
         <div class="header_right">
           <p>
-            +7(499) 777-77-77<br>
-            +7(499) 777-77-77
+            <span>
+              +7(499) 777-77-77<br>
+              +7(499) 777-77-77
+            </span>
+          </p>
+          <p>
+            <a href="#" class="feedback_link">Обратная связь</a>
           </p>
         </div>
       </div>
@@ -38,43 +43,39 @@
       <div class="slider_buttons slider_right_button"></div>
     </div>
     <div class="content">
-      <aside>
-          <h2>Новости</h2>
+      <div class="breadcrumbs">
+        <nav>
           <ul>
-            <li>
-              <a href="#">
-                <span>14 сентября 2013 г.</span><br>
-                Редизайн веб-сайта архитектурного бюро.
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>14 сентября 2013 г.</span><br>
-                Раскрутка интернет-магазина декора-<br>
-                тивных стикеров и виниловых   наклеек.
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>14 сентября 2013 г.</span><br>
-                SEO-продвижение сайта поставщика<br>
-                дизель генераторов.
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>14 сентября 2013 г.</span><br>
-                Поисковое продвижение веб-сайта<br>
-                поставщика гидрооборудования.
-              </a>
-            </li>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">Бытовая техника</a></li>
           </ul>
-          <p>
-            <a href="#">
-              Архив новостей
-            </a>
-          </p>
-        </aside>
+        </nav>
+      </div>
+      <aside>
+        <nav>
+          <ul>
+            <li><a href="#">Автомобили</a></li>
+            <li>
+              <a href="#">Бытовая техника</a>
+              <ul>
+                <li><a href="#">Микроволновки</a></li>
+                <li><a href="#">Холодильники</a></li>
+                <li><a href="#">Посудомоечные машины</a></li>
+                <li><a href="#">Чайники</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Мобильная техника</a></li>
+            <li><a href="#">Компьютеры</a></li>
+            <li><a href="#">Одежда</a></li>
+            <li><a href="#">Недвижимость</a></li>
+          </ul>
+        </nav>
+        <div class="price">
+          <img src="images/price.png" alt="price" title="price" width="97px" height="111px">
+          <p>Прайс-лист</p>
+        </div>
+      </aside>
       <main>
           <h2>Компания «Пиксель Плюс»</h2>
           <p>
@@ -114,6 +115,34 @@
         </div>
       </div>
     </footer>
+    <div class="feedback_background transparent">
+      <div class="feedback_close"></div>
+      <div class="feedback">
+        <form class="feedback_form" action="index.html" method="post">
+          <fieldset>
+              <legend>Обратная связь</legend>
+            <label>
+              <span>Ваше имя *</span><br>
+              <input type="text" name="name" autofocus required>
+            </label>
+            <label>
+              <span>Телефон *</span><br>
+              <input type="tel" name="phone" required>
+            </label>
+            <label>
+              <span>Email *</span><br>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Сообщение</span><br>
+              <textarea name="message"></textarea>
+            </label>
+            <input type="submit" name="feedback_submit" value="Отправить" class="feedback_send">
+          </fieldset>
+        </form>
+      </div>
+    </div>
   </body>
   <script src="js/slider.js"></script>
+  <script type="text/javascript" src="js/feedback.js"></script>
 </html>
