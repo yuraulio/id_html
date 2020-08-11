@@ -227,16 +227,31 @@ aside ul {
 }
 aside ul li {
   font-size: 18px;
+  line-height: 32px;
 }
 
 aside ul a {
   color: #767676;
   text-decoration: none;
-  line-height: 32px;
 }
 
 aside ul a:hover {
   text-decoration: underline;
+}
+
+aside ul ul {
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style-type: disc;
+}
+
+aside ul ul li{
+  font-size: 14px;
+  line-height: 22px;
+}
+
+aside ul ul li a:hover {
+  font-weight: bold;
 }
 
 main {
@@ -322,7 +337,7 @@ footer { /*Блок футера*/
   background-color: white;
 }
 
-.feedback fieldset {
+.feedback_form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -342,7 +357,8 @@ footer { /*Блок футера*/
 }
 
 .feedback label {
-  margin: 0 auto 10px;
+  position: relative;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -354,7 +370,7 @@ footer { /*Блок футера*/
   width: 343px;
   height: 44px;
   padding: 0 10px;
-  margin-top: 3px;
+  margin-bottom: 14px;
 }
 
 .feedback textarea {
@@ -366,12 +382,23 @@ footer { /*Блок футера*/
   border-width: 1px;
   border-color: #c3c3c3;
   padding: 0 10px;
-  margin-top: 3px;
+}
 
+.error {
+  outline: 1px solid rgb(255, 131, 131);
+  border: none;
+  box-shadow: inset 0 0 13px 0 rgba(228, 106, 106, 0.75);
+}
+
+input::placeholder {
+  color: #dc7f7f;
+  font-family: PT Sans;
+  font-size: 14px;
+  font-style: italic;
 }
 
 .feedback_send {
-  margin-top: 5px !important;
+  margin: 24px 0 !important;
   width: 128px !important;
   height: 42px !important;
   background-color: #777777;

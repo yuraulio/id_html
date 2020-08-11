@@ -57,8 +57,8 @@
           <ul>
             <li><a href="#">Автомобили</a></li>
             <li>
-              <a href="#">Бытовая техника</a>
-              <ul>
+              <a href="#" id="sublist_link">Бытовая техника</a>
+              <ul id="sublist">
                 <li><a href="#">Микроволновки</a></li>
                 <li><a href="#">Холодильники</a></li>
                 <li><a href="#">Посудомоечные машины</a></li>
@@ -118,27 +118,25 @@
     <div class="feedback_background transparent">
       <div class="feedback_close"></div>
       <div class="feedback">
-        <form class="feedback_form" action="index.html" method="post">
-          <fieldset>
-              <legend>Обратная связь</legend>
-            <label>
-              <span>Ваше имя *</span><br>
-              <input type="text" name="name" autofocus required>
-            </label>
-            <label>
-              <span>Телефон *</span><br>
-              <input type="tel" name="phone" required>
-            </label>
-            <label>
-              <span>Email *</span><br>
-              <input type="email" name="email" required>
-            </label>
-            <label>
-              <span>Сообщение</span><br>
-              <textarea name="message"></textarea>
-            </label>
-            <input type="submit" name="feedback_submit" value="Отправить" class="feedback_send">
-          </fieldset>
+        <form class="feedback_form" action="index.html" method="post" novalidate>
+          <legend>Обратная связь</legend>
+          <label for="name">
+            <span>Ваше имя *</span>
+          </label>
+          <input type="text" id="name" name="name" autofocus required   placeholder=" " maxlength="50" pattern="[а-яА-ЯёЁіІєЄa-zA-Z]{1,50}$">
+          <label for="phone">
+            <span>Телефон *</span><br>
+          </label>
+          <input type="tel" id="phone" name="phone" required placeholder=" " pattern="^\+380\d{9}$" maxlength="13" minlength="13">
+          <label for="email">
+            <span>Email *</span>
+          </label>
+          <input  id="email" type="email" name="email" required placeholder=" ">
+          <label for="message">
+            <span>Сообщение</span>
+          </label>
+          <textarea  id="message" name="message"></textarea>
+          <input type="submit" name="feedback_submit" value="Отправить" class="feedback_send">
         </form>
       </div>
     </div>
