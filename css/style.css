@@ -37,6 +37,7 @@ header { /*Блок хедера*/
 
 .header_row {
   display: flex;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 10px;
   width: 1000px;
@@ -83,6 +84,7 @@ line-height: 46px;
 .nav_main_row {
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0 10px;
   width: 1000px;
@@ -177,6 +179,8 @@ line-height: 46px;
 
 .content { /*Блок контенту*/
   /* display: flex; */
+  box-sizing: border-box;
+  padding: 0 10px;
   margin: 0 auto;
   width: 1000px;
 }
@@ -255,6 +259,19 @@ aside ul ul li a:hover {
   font-weight: bold;
 }
 
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 100px;
+}
+.price p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #444444;
+  margin: 5px 0 0;
+}
 main {
   float: right;
   margin: 0 0 0 auto;
@@ -262,13 +279,13 @@ main {
 }
 
 main h2 {
-  padding-left: 40px;
+  /* padding-left: 40px; */
   font-size: 40px;
   font-weight: 100;
 }
 
 main p {
-  padding-left: 40px;
+  /* padding-left: 40px; */
 }
 
 footer { /*Блок футера*/
@@ -278,6 +295,7 @@ footer { /*Блок футера*/
 
 .footer_row {
   display: flex;
+  box-sizing: border-box;
   margin: 0px auto;
   padding: 45px 10px;
   width: 1000px;
