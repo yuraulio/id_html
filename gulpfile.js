@@ -2,7 +2,7 @@ const {src, dest, watch} = require('gulp');
 var gulp_scss = require('gulp-scss');
 
 function scss() {
-  return src('app/scss/style.scss')
+  return src('app/scss/*.scss')
     .pipe(gulp_scss())
     .pipe(dest('app/css'));
 
