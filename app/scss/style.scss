@@ -63,7 +63,16 @@
 
 $blue: #3498db;
 $bblue: #337ab7;
+$text: #8c8c8c;
+$grey: #f7f7f7;
 
+@mixin content_block {
+  display: flex;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1250px;
+}
 @mixin font() {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -77,35 +86,64 @@ body {
     @include font();
     text-decoration: none;
   }
-
-  .wrap {
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 1250px;
-    height: 200px;
+  .wrap_header {
 
     header {
-      display: flex;
-      height: 100px;
+      @include content_block();
+      height: 102px;
 
       .logo {
         img {
-          margin: 10px 0;
+          margin: 11px 0;
           width: 80px;
           height: 80px;
         }
       }
       nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 1000px;
         ul {
           display: inline-flex;
           list-style-type: none;
+          margin: 0;
+
+          li {
+            padding: 0 20px;
+          }
+          a {
+            font-size: 14px;
+            color: $text;
+          }
         }
       }
       .request_button {
-        background-color: $bblue;
+        display: flex;
+        align-items: center;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 140px;
+          height: 40px;
+          border-radius: 20px;
+          background-color: $bblue;
+          font-size: 14px;
+          color: white;
+        }
       }
 
+    }
+  }
+
+  .wrap_course_register {
+    background-color: $grey;
+    box-shadow: 0 10px 10px -10px rgba(200,200,200,0.8) inset; //Підібрати тінь
+
+    .course_register {
+      @include content_block();
+      height: 670px;
     }
   }
 }

@@ -57,21 +57,51 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     text-decoration: none; }
-  body .wrap {
+  body .wrap_header header {
+    display: flex;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 15px;
     width: 1250px;
-    height: 200px; }
-    body .wrap header {
+    height: 102px; }
+    body .wrap_header header .logo img {
+      margin: 11px 0;
+      width: 80px;
+      height: 80px; }
+    body .wrap_header header nav {
       display: flex;
-      height: 100px; }
-      body .wrap header .logo img {
-        margin: 10px 0;
-        width: 80px;
-        height: 80px; }
-      body .wrap header nav ul {
+      align-items: center;
+      justify-content: flex-end;
+      width: 1000px; }
+      body .wrap_header header nav ul {
         display: inline-flex;
-        list-style-type: none; }
-      body .wrap header .request_button {
-        background-color: #337ab7; }
+        list-style-type: none;
+        margin: 0; }
+        body .wrap_header header nav ul li {
+          padding: 0 20px; }
+        body .wrap_header header nav ul a {
+          font-size: 14px;
+          color: #8c8c8c; }
+    body .wrap_header header .request_button {
+      display: flex;
+      align-items: center; }
+      body .wrap_header header .request_button a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #337ab7;
+        font-size: 14px;
+        color: white; }
+  body .wrap_course_register {
+    background-color: #f7f7f7;
+    box-shadow: 0 10px 10px -10px rgba(200, 200, 200, 0.8) inset; }
+    body .wrap_course_register .course_register {
+      display: flex;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 15px;
+      width: 1250px;
+      height: 670px; }
