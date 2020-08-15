@@ -69,9 +69,14 @@ html body {
       height: 80px; }
     html body .wrap_header header nav {
       margin: auto 0 auto auto;
-      display: flex; }
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch; }
       html body .wrap_header header nav ul {
         display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
         align-items: center;
         list-style-type: none;
         padding: 0; }
@@ -84,8 +89,9 @@ html body {
           color: #8c8c8c; }
         html body .wrap_header header nav ul .request_button {
           display: flex;
-          align-items: center;
+          flex-direction: row;
           justify-content: center;
+          align-items: center;
           width: 140px;
           height: 40px;
           border-radius: 20px;
@@ -119,8 +125,8 @@ html body {
       html body .wrap_header header .menu_button div {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         width: 42px;
         height: 32px;
         background-color: #337ab7;
@@ -130,3 +136,5 @@ html body {
           width: 22px;
           height: 2px;
           background-color: white; } }
+
+/*# sourceMappingURL=style.css.map */

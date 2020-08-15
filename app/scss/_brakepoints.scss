@@ -59,10 +59,7 @@
             display: block;
 
             div {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: center;
+              @include flex($dir: column, $jus: center, $align: center);
               width: 42px;
               height: 32px;
               background-color: $bblue;
