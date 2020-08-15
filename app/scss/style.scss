@@ -71,7 +71,7 @@ $grey: #f7f7f7;
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 15px;
-  width: 1250px;
+  max-width: 1250px;
 }
 @mixin font() {
   font-family: 'Open Sans', sans-serif;
@@ -86,6 +86,7 @@ body {
     @include font();
     text-decoration: none;
   }
+  
   .wrap_header {
 
     header {
@@ -94,20 +95,21 @@ body {
 
       .logo {
         img {
-          margin: 11px 0;
+          margin: 11px auto;
           width: 80px;
           height: 80px;
         }
       }
       nav {
+        margin: auto 0 auto auto;
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        width: 1000px;
         ul {
           display: inline-flex;
           list-style-type: none;
-          margin: 0;
+          padding: 0;
+          margin-left: auto;
 
           li {
             padding: 0 20px;
@@ -119,6 +121,7 @@ body {
         }
       }
       .request_button {
+        margin: 0u;
         display: flex;
         align-items: center;
         a {
@@ -138,6 +141,7 @@ body {
   }
 
   .wrap_course_register {
+    min-width: 1250px;
     background-color: $grey;
     box-shadow: 0 10px 10px -10px rgba(200,200,200,0.8) inset; //Підібрати тінь
 
