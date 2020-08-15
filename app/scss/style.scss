@@ -1,4 +1,4 @@
-@import "mobile.css" (max-width: 320px);
+// @include "brakepoints.css";
 
 @font-face {
   font-family: 'Open Sans';
@@ -61,11 +61,6 @@
   font-weight: 600;
 }
 
-$blue: #3498db;
-$bblue: #337ab7;
-$text: #8c8c8c;
-$grey: #f7f7f7;
-
 @mixin content_block {
   display: flex;
   box-sizing: border-box;
@@ -73,6 +68,13 @@ $grey: #f7f7f7;
   padding: 0 15px;
   max-width: 1250px;
 }
+
+$blue: #3498db;
+$bblue: #337ab7;
+$text: #8c8c8c;
+$grey: #f7f7f7;
+
+
 @mixin font() {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -86,7 +88,7 @@ body {
     @include font();
     text-decoration: none;
   }
-  
+
   .wrap_header {
 
     header {
@@ -103,51 +105,68 @@ body {
       nav {
         margin: auto 0 auto auto;
         display: flex;
-        align-items: center;
-        justify-content: flex-end;
+
         ul {
-          display: inline-flex;
+          display: flex;
+          align-items: center;
           list-style-type: none;
           padding: 0;
-          margin-left: auto;
 
           li {
-            padding: 0 20px;
+            margin: 0 20px;
           }
+
+          li:last-child {
+            margin: 0;
+          }
+
           a {
             font-size: 14px;
             color: $text;
           }
+
+          .request_button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 140px;
+              height: 40px;
+              border-radius: 20px;
+              background-color: $bblue;
+              font-size: 14px;
+              color: white;
+          }
+
+          .request_button:hover {
+            background-color: $blue;
+          }
+
+          .request_button:active {
+            background: radial-gradient(ellipse, $blue, $bblue);
+          }
+
+          .menu_button {
+            display: none;
+          }
         }
       }
-      .request_button {
-        margin: 0u;
-        display: flex;
-        align-items: center;
-        a {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 140px;
-          height: 40px;
-          border-radius: 20px;
-          background-color: $bblue;
-          font-size: 14px;
-          color: white;
-        }
-      }
+
 
     }
   }
 
-  .wrap_course_register {
-    min-width: 1250px;
-    background-color: $grey;
-    box-shadow: 0 10px 10px -10px rgba(200,200,200,0.8) inset; //Підібрати тінь
+  // .wrap_course_register {
+  //   min-width: 1250px;
+  //   background-color: $grey;
+  //   box-shadow: 0 10px 10px -10px rgba(200,200,200,0.8) inset; //Підібрати тінь
+  //
+  //   .course_register {
+  //     @include content_block();
+  //     height: 670px;
+  //   }
+  //
 
-    .course_register {
-      @include content_block();
-      height: 670px;
-    }
-  }
+
 }
+
+@import 'brakepoints';
