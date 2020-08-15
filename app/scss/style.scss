@@ -69,6 +69,18 @@
   max-width: 1250px;
 }
 
+@mixin flex(
+        $disp: flex,
+        $dir: row,
+        $jus: flex-start,
+        $align: stretch ) {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
 $blue: #3498db;
 $bblue: #337ab7;
 $text: #8c8c8c;
