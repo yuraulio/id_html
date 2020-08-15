@@ -79,70 +79,72 @@ $grey: #f7f7f7;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
-
-body {
-  margin: 0;
-  @include font();
-
-  a {
+html {
+  body {
+    margin: 0;
     @include font();
-    text-decoration: none;
-  }
 
-  .wrap_header {
+    a {
+      @include font();
+      text-decoration: none;
+    }
 
-    header {
-      @include content_block();
-      height: 102px;
+    .wrap_header {
 
-      .logo {
-        img {
-          margin: 11px auto;
-          width: 80px;
-          height: 80px;
+      header {
+        @include content_block();
+        height: 102px;
+
+        .logo {
+          img {
+            margin: 11px auto;
+            width: 80px;
+            height: 80px;
+          }
         }
-      }
-      nav {
-        margin: auto 0 auto auto;
-        display: flex;
-
-        ul {
+        nav {
+          margin: auto 0 auto auto;
           display: flex;
-          align-items: center;
-          list-style-type: none;
-          padding: 0;
 
-          li {
-            margin: 0 20px;
-          }
+          ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
 
-          li:last-child {
-            margin: 0;
-          }
+            li {
+              margin: 0 20px;
+            }
 
-          a {
-            font-size: 14px;
-            color: $text;
-          }
+            li:last-child {
+              margin: 0;
+            }
 
-          .request_button {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              width: 140px;
-              height: 40px;
-              border-radius: 20px;
-              background-color: $bblue;
-              font-size: 14px;
-              color: white;
-          }
+            a {
+              font-size: 0.875em;
+              color: $text;
+            }
 
-          .request_button:hover {
-            background-color: $blue;
-          }
+            .request_button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 140px;
+                height: 40px;
+                border-radius: 20px;
+                background-color: $bblue;
+                font-size: 0.875em;
+                color: white;
+              }
 
-          .request_button:active {
-            background: radial-gradient(ellipse, $blue, $bblue);
+              .request_button:hover {
+                background-color: $blue;
+              }
+
+              .request_button:active {
+                background: radial-gradient(ellipse, $blue, $bblue);
+              }
+            }
           }
 
           .menu_button {
@@ -150,23 +152,19 @@ body {
           }
         }
       }
-
-
-    }
   }
-
-  // .wrap_course_register {
-  //   min-width: 1250px;
-  //   background-color: $grey;
-  //   box-shadow: 0 10px 10px -10px rgba(200,200,200,0.8) inset; //Підібрати тінь
-  //
-  //   .course_register {
-  //     @include content_block();
-  //     height: 670px;
-  //   }
-  //
-
-
 }
 
 @import 'brakepoints';
+
+
+// .wrap_course_register {
+//   min-width: 1250px;
+//   background-color: $grey;
+//   box-shadow: 0 10px 10px -10px rgba(200,200,200,0.8) inset; //  Підібрати тінь
+//
+//   .course_register {
+//     @include content_block();
+//     height: 670px;
+//   }
+//

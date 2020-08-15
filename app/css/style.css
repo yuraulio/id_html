@@ -48,41 +48,41 @@
   src: url("../fonts/OpenSans-SemiBoldItalic.ttf");
   font-style: italic;
   font-weight: 600; }
-body {
+html body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px; }
-  body a {
+  html body a {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     text-decoration: none; }
-  body .wrap_header header {
+  html body .wrap_header header {
     display: flex;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 15px;
     max-width: 1250px;
     height: 102px; }
-    body .wrap_header header .logo img {
+    html body .wrap_header header .logo img {
       margin: 11px auto;
       width: 80px;
       height: 80px; }
-    body .wrap_header header nav {
+    html body .wrap_header header nav {
       margin: auto 0 auto auto;
       display: flex; }
-      body .wrap_header header nav ul {
+      html body .wrap_header header nav ul {
         display: flex;
         align-items: center;
         list-style-type: none;
         padding: 0; }
-        body .wrap_header header nav ul li {
+        html body .wrap_header header nav ul li {
           margin: 0 20px; }
-        body .wrap_header header nav ul li:last-child {
+        html body .wrap_header header nav ul li:last-child {
           margin: 0; }
-        body .wrap_header header nav ul a {
-          font-size: 14px;
+        html body .wrap_header header nav ul a {
+          font-size: 0.875em;
           color: #8c8c8c; }
-        body .wrap_header header nav ul .request_button {
+        html body .wrap_header header nav ul .request_button {
           display: flex;
           align-items: center;
           justify-content: center;
@@ -90,41 +90,43 @@ body {
           height: 40px;
           border-radius: 20px;
           background-color: #337ab7;
-          font-size: 14px;
+          font-size: 0.875em;
           color: white; }
-        body .wrap_header header nav ul .request_button:hover {
+        html body .wrap_header header nav ul .request_button:hover {
           background-color: #3498db; }
-        body .wrap_header header nav ul .request_button:active {
+        html body .wrap_header header nav ul .request_button:active {
           background: radial-gradient(ellipse, #3498db, #337ab7); }
-        body .wrap_header header nav ul .menu_button {
-          display: none; }
+    html body .wrap_header header .menu_button {
+      display: none; }
 
 @media (max-width: 825px) {
-  body .wrap_header header nav ul li {
+  html body .wrap_header header nav ul li {
     margin: 0 10px; } }
 @media (max-width: 725px) {
-  body .wrap_header header nav ul li {
+  html body .wrap_header header nav ul li {
     margin: 0 5px; } }
 @media (max-width: 675px) {
-  body .wrap_header header {
+  html body .wrap_header header {
     height: 70px; }
-    body .wrap_header header .logo img {
+    html body .wrap_header header .logo img {
       margin: 5px auto;
       width: 60px;
       height: 60px; }
-    body .wrap_header header nav ul {
+    html body .wrap_header header nav ul {
       display: none; }
-    body .wrap_header header nav .menu_button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 42px;
-      height: 32px;
-      background-color: #337ab7;
-      border-radius: 3px; }
-      body .wrap_header header nav .menu_button div {
-        margin: 2px auto;
-        width: 22px;
-        height: 2px;
-        background-color: white; } }
+    html body .wrap_header header .menu_button {
+      display: block; }
+      html body .wrap_header header .menu_button div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 32px;
+        background-color: #337ab7;
+        border-radius: 3px; }
+        html body .wrap_header header .menu_button div div {
+          margin: 2px auto;
+          width: 22px;
+          height: 2px;
+          background-color: white; } }
