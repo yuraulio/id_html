@@ -10,6 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-notify": "^3.2.0",
     "gulp-scss": "^1.4.0"
   }
 }

@@ -55,7 +55,7 @@
             }
           }
 
-          > button {
+          #menu_button {
             @include flex($dir: column, $jus: center, $align: center);
             min-width: 42px;
             height: 32px;
@@ -72,11 +72,11 @@
             }
           }
 
-          > button:hover {
+          #menu_button:hover {
             background-color: $blue;
           }
 
-          > button:active {
+          #menu_button:active {
             background: radial-gradient(ellipse, $blue, $bblue);
           }
         }
