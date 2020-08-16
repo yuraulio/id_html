@@ -18,8 +18,9 @@
 
       ul {
         @include flex($align: center);
-        list-style-type: none;
+        margin: 0;
         padding: 0;
+        list-style-type: none;
 
         li {
           margin: 0 20px;
@@ -56,7 +57,7 @@
       }
     }
 
-    #menu_button {
+   #menu_button {
       display: none;
     }
   }

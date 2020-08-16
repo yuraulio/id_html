@@ -50,16 +50,31 @@
           }
 
           nav {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+
             ul {
-              display: none;
+              flex-direction: column;
+
+              li {
+                margin: 8px 0;
+              }
             }
+          }
+
+          .open_menu {
+              display: block;
           }
 
           #menu_button {
             @include flex($dir: column, $jus: center, $align: center);
+            margin: auto 0 auto auto;
+            padding: 0;
             min-width: 42px;
             height: 32px;
-            padding: 0;
             background-color: $bblue;
             border: none;
             border-radius: 3px;
