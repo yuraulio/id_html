@@ -60,7 +60,7 @@ html body {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: center;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 15px;
@@ -93,6 +93,7 @@ html body {
             width: 140px;
             height: 40px;
             border: none;
+            padding: 0;
             border-radius: 20px;
             background-color: #337ab7;
             font-size: 0.875em;
@@ -106,7 +107,7 @@ html body {
         html body .wrap_header header nav ul a {
           font-size: 0.875em;
           color: #8c8c8c; }
-    html body .wrap_header header button {
+    html body .wrap_header header > button {
       display: none; }
 
 @media (max-width: 825px) {
@@ -124,22 +125,23 @@ html body {
       height: 60px; }
     html body .wrap_header header nav ul {
       display: none; }
-    html body .wrap_header header nav button {
+    html body .wrap_header header > button {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 42px;
+      min-width: 42px;
       height: 32px;
+      padding: 0;
       background-color: #337ab7;
       border: none;
       border-radius: 3px; }
-      html body .wrap_header header nav button div {
+      html body .wrap_header header > button div {
         margin: 2px auto;
         width: 22px;
         height: 2px;
         background-color: white; }
-    html body .wrap_header header nav button:hover {
-      background-color: #blue; }
-    html body .wrap_header header nav button:active {
+    html body .wrap_header header > button:hover {
+      background-color: #3498db; }
+    html body .wrap_header header > button:active {
       background: radial-gradient(ellipse, #3498db, #337ab7); } }

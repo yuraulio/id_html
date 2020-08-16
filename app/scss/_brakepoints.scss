@@ -53,30 +53,31 @@
             ul {
               display: none;
             }
+          }
 
-            button {
-              @include flex($dir: column, $jus: center, $align: center);
-              width: 42px;
-              height: 32px;
-              background-color: $bblue;
-              border: none;
-              border-radius: 3px;
+          > button {
+            @include flex($dir: column, $jus: center, $align: center);
+            min-width: 42px;
+            height: 32px;
+            padding: 0;
+            background-color: $bblue;
+            border: none;
+            border-radius: 3px;
 
-              div {
-                margin: 2px auto;
-                width: 22px;
-                height: 2px;
-                background-color: white;
-              }
+            div {
+              margin: 2px auto;
+              width: 22px;
+              height: 2px;
+              background-color: white;
             }
+          }
 
-            button:hover {
-              background-color: #blue;
-            }
+          > button:hover {
+            background-color: $blue;
+          }
 
-            button:active {
-              background: radial-gradient(ellipse, $blue, $bblue);
-            }
+          > button:active {
+            background: radial-gradient(ellipse, $blue, $bblue);
           }
         }
       }

@@ -73,7 +73,6 @@ $grey: #f7f7f7;
 }
 
 @mixin content_block {
-  @include flex();
   box-sizing: border-box;
   margin: 0 auto;
   padding: 0 15px;

@@ -3,7 +3,10 @@ var gulp_scss = require('gulp-scss');
 
 function scss() {
   return src('app/scss/style.scss')
-    .pipe(gulp_scss())
+    .pipe(gulp_scss().on('error', function(error)
+      {
+        console.log( error );
+      } ))
     .pipe(dest('app/css'));
 
 }
