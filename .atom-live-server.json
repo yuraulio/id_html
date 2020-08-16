@@ -1,3 +1,4 @@
 {
-  "root": "app"
+  "root": "app",
+  "browser": "Firefox Developer Edition"
 }

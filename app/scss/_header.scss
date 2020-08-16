@@ -22,6 +22,25 @@
 
         li {
           margin: 0 20px;
+
+          button {
+              @include flex($jus: center, $align: center);
+              width: 140px;
+              height: 40px;
+              border: none;
+              border-radius: 20px;
+              background-color: $bblue;
+              font-size: 0.875em;
+              color: white;
+            }
+
+            button:hover {
+              background-color: $blue;
+            }
+
+            button:active {
+              background: radial-gradient(ellipse, $blue, $bblue);
+            }
         }
 
         li:last-child {
@@ -32,28 +51,9 @@
           font-size: 0.875em;
           color: $text;
         }
-
-        .request_button {
-            @include flex($jus: center, $align: center);
-            width: 140px;
-            height: 40px;
-            border-radius: 20px;
-            background-color: $bblue;
-            font-size: 0.875em;
-            color: white;
-          }
-
-          .request_button:hover {
-            background-color: $blue;
-          }
-
-          .request_button:active {
-            background: radial-gradient(ellipse, $blue, $bblue);
-          }
-        }
       }
 
-      .menu_button {
+      button {
         display: none;
       }
     }

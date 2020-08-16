@@ -53,16 +53,13 @@
             ul {
               display: none;
             }
-          }
 
-          .menu_button {
-            display: block;
-
-            div {
+            button {
               @include flex($dir: column, $jus: center, $align: center);
               width: 42px;
               height: 32px;
               background-color: $bblue;
+              border: none;
               border-radius: 3px;
 
               div {
@@ -71,6 +68,14 @@
                 height: 2px;
                 background-color: white;
               }
+            }
+
+            button:hover {
+              background-color: #blue;
+            }
+
+            button:active {
+              background: radial-gradient(ellipse, $blue, $bblue);
             }
           }
         }
