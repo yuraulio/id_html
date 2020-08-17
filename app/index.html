@@ -30,9 +30,40 @@
           </button>
         </header>
     </div>
-    <div class="wrap_course_register">
-        <section class="course_register">
-
+    <div class="wrap_course">
+        <section class="course">
+          <div class="course_description">
+            <h2>Курси програмування у Луцьку</h2>
+            <p>
+              Сфера IT розвиваєтсья максимально швидко. Зараз дуже популярно здобувати освіту, що пов'язана з IT. Існує лише одна проблема — брак дійсно кваліфікованих спеціалістів в Україні. Під час навчання в університеті ми отримуємо мало практики і "живих", реальних кейсів. IT школа OxIT створила таку методику навчання, при якій за короткий час ви отримаєте необхідні знання, щоб стати IT спеціалістом. Чекаємо вас на наших курсах з програмування у Луцьку. Старт наступного курсу 3 серпня.'
+            </p>
+          </div>
+          <form class="course_register" action="index.html" method="post">
+            <legend>Зареєструватися на курси</legend>
+            <label for="">
+              <span>Ім'я</span>
+              <input type="text" name="name" placeholder="Ім'я">
+            </label>
+            <label for="">
+              <span>Прізвище</span>
+              <input type="text" name="surname" placeholder="Прізвище">
+            </label>
+            <label for="">
+              <span>Мене більше цікавить</span>
+              <input type="text" name="branch" placeholder="developer or QA">
+            </label>
+            <label for="">
+              <span>Номер телефону</span>
+              <input type="tel" name="phone" placeholder="Номер телефону: +38 XXX XX XX XXX">
+            </label>
+            <label for="">
+              <span>Email</span>
+              <input type="email" name="email"  placeholder="Email">
+            </label>
+            <label for=""><input type="checkbox" name="agree" value=""><span>Я погоджуюся із <a href="#">Політикою Конфіденційності</a></span></label>
+            <button type="button" name="button">Зареєструватися зараз</button>
+          </form>
+          </div>
         </section>
       </div>
     <script type="text/javascript" src="js/menu.js"></script>

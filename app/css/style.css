@@ -93,7 +93,11 @@ html body {
           padding: 0;
           list-style-type: none; }
           html body .wrap_header header nav ul li {
-            margin: 0 20px; }
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: stretch;
+            padding: 10px 20px; }
             html body .wrap_header header nav ul li button {
               display: flex;
               flex-direction: row;
@@ -111,17 +115,28 @@ html body {
               background-color: #3498db; }
             html body .wrap_header header nav ul li button:active {
               background: radial-gradient(ellipse, #3498db, #337ab7); }
+          html body .wrap_header header nav ul li:hover {
+            background-color: #eeeeee; }
+            html body .wrap_header header nav ul li:hover a {
+              color: #337ab7; }
           html body .wrap_header header nav ul li:last-child {
-            margin: 0; }
+            padding: 0; }
+          html body .wrap_header header nav ul li:last-child:hover {
+            background-color: transparent; }
           html body .wrap_header header nav ul a {
             font-size: 0.875em;
             color: #8c8c8c; }
       html body .wrap_header header #menu_button {
         display: none; }
-  html body .wrap_course_register {
-    max-width: 100%;
+  html body .wrap_course {
+    padding-top: 80px;
+    width: 100%;
     background-color: #f7f7f7; }
-    html body .wrap_course_register .course_register {
+    html body .wrap_course .course {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: stretch;
       box-sizing: border-box;
       margin: 0 auto;
       padding: 0 15px;

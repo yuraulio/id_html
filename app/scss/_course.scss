@@ -1,0 +1,11 @@
+.wrap_course {
+  padding-top: 80px;
+  width: 100%;
+  background-color: $grey;
+
+  .course {
+    @include flex();
+    @include content_block();
+    height: 670px;
+  }
+}

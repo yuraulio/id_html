@@ -1,9 +1,0 @@
-.wrap_course_register {
-  max-width: 100%;
-  background-color: $grey;
-
-  .course_register {
-    @include content_block();
-    height: 670px;
-  }
-}
