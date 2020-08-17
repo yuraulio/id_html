@@ -59,20 +59,18 @@
   font-weight: 600;
 }
 
-
-
 $blue: #3498db;
 $bblue: #337ab7;
-$text: #8c8c8c;
+$text: #777777;
+$header: #333333;
 $grey: #f7f7f7;
-
 
 @mixin font() {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.3px;
-  color: #a3a3a3;
+  color: $text;
 }
 
 @mixin content_block {

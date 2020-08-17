@@ -1,27 +1,45 @@
 .wrap_course {
-  padding-top: 80px;
+  padding-top: 108px;
   width: 100%;
   background-color: $grey;
 
   .course {
-    @include flex($jus: center);
+    @include flex($jus: space-between);
     @include content_block();
+
     // height: 670px;
 
-    h2 {
-      text-align: center;
-      font-size: 1.75em;
-      color: black;
-    }
-    .course_description p {
-      max-width: 540px;
-      text-align: center;
-      // font-size: 18px;
+    .course_description {
+      @include flex($dir: column, $align: center);
+      padding-top: 190px;
+      width: 610px;
+
+      h2 {
+        text-align: center;
+        font-size: 2.1875em;
+        font-weight: normal;
+        letter-spacing: 0.2px;
+        color: $header;//
+        margin: 0;
+      }
+
+      p {
+        max-width: 540px;
+        text-align: center;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 2rem;
+      }
     }
 
     .course_register {
       @include flex($dir: column, $jus: center, $align: center);
-      max-width: 590px;
+      max-width: 610px;
+
+      input {
+        width: 590px;
+        height: 50px;
+      }
     }
   }
 }

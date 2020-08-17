@@ -54,13 +54,13 @@ html body {
   font-size: 16px;
   font-weight: 300;
   letter-spacing: 0.3px;
-  color: #a3a3a3; }
+  color: #777777; }
   html body a {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.3px;
-    color: #a3a3a3;
+    color: #777777;
     text-decoration: none; }
   html body .wrap_header {
     position: fixed;
@@ -134,35 +134,51 @@ html body {
             background-color: transparent; }
           html body .wrap_header header nav ul a {
             font-size: 0.875em;
-            color: #8c8c8c; }
+            color: #555555; }
       html body .wrap_header header #menu_button {
         display: none; }
   html body .wrap_course {
-    padding-top: 80px;
+    padding-top: 108px;
     width: 100%;
     background-color: #f7f7f7; }
     html body .wrap_course .course {
       display: flex;
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       align-items: stretch;
       box-sizing: border-box;
       margin: 0 auto;
       padding: 0 15px;
       max-width: 1250px; }
-      html body .wrap_course .course h2 {
-        text-align: center;
-        font-size: 1.75em;
-        color: black; }
-      html body .wrap_course .course .course_description p {
-        max-width: 540px;
-        text-align: center; }
+      html body .wrap_course .course .course_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 190px;
+        width: 610px; }
+        html body .wrap_course .course .course_description h2 {
+          text-align: center;
+          font-size: 2.1875em;
+          font-weight: normal;
+          letter-spacing: 0.2px;
+          color: #333333;
+          margin: 0; }
+        html body .wrap_course .course .course_description p {
+          max-width: 540px;
+          text-align: center;
+          font-size: 18px;
+          letter-spacing: 0;
+          line-height: 2rem; }
       html body .wrap_course .course .course_register {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        max-width: 590px; }
+        max-width: 610px; }
+        html body .wrap_course .course .course_register input {
+          width: 590px;
+          height: 50px; }
 
 @media (max-width: 825px) {
   html body .wrap_header header nav ul li {
@@ -214,4 +230,6 @@ html body {
       html body .wrap_header header #menu_button:hover {
         background-color: #3498db; }
       html body .wrap_header header #menu_button:active {
-        background: radial-gradient(ellipse, #3498db, #337ab7); } }
+        background: radial-gradient(ellipse, #3498db, #337ab7); }
+  html body .wrap_course {
+    padding-top: 78px; } }
