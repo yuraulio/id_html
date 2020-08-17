@@ -30,7 +30,7 @@
 }
 @font-face {
   font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Italicr.ttf');
+  src: url('../fonts/OpenSans-Italic.ttf');
   font-style: italic;
   font-weight: 400;
 }
@@ -70,6 +70,9 @@ $grey: #f7f7f7;
 @mixin font() {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  color: #a3a3a3;
 }
 
 @mixin content_block {
@@ -93,7 +96,7 @@ $grey: #f7f7f7;
 
 html {
   body {
-    margin: 0;
+    margin: 0px;
     @include font();
 
     a {

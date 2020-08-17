@@ -4,8 +4,24 @@
   background-color: $grey;
 
   .course {
-    @include flex();
+    @include flex($jus: center);
     @include content_block();
-    height: 670px;
+    // height: 670px;
+
+    h2 {
+      text-align: center;
+      font-size: 1.75em;
+      color: black;
+    }
+    .course_description p {
+      max-width: 540px;
+      text-align: center;
+      // font-size: 18px;
+    }
+
+    .course_register {
+      @include flex($dir: column, $jus: center, $align: center);
+      max-width: 590px;
+    }
   }
 }
