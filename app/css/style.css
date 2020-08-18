@@ -180,7 +180,7 @@ html body {
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
-        max-width: 610px;
+        width: 50%;
         padding-top: 49px; }
         html body .wrap_course .course .course_register legend {
           align-self: flex-start;
@@ -209,7 +209,7 @@ html body {
         html body .wrap_course .course .course_register input {
           margin-left: 20px;
           padding: 0 15px;
-          width: 557px;
+          max-width: 100%;
           height: 48px;
           border-radius: 5px;
           border-width: 1px;

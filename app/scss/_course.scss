@@ -34,7 +34,7 @@
 
     .course_register {
       @include flex($dir: column, $jus: flex-start);
-      max-width: 610px;
+      width: 50%;
       padding-top: 49px;
 
       legend {
@@ -69,7 +69,8 @@
       input {
         margin-left: 20px;
         padding: 0 15px;
-        width: 557px;
+        max-width: 100%;
+        // width: 557px;
         height: 48px;
         border-radius: 5px;
         border-width: 1px;
