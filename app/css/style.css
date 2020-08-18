@@ -62,14 +62,14 @@ html body {
     letter-spacing: 0.3px;
     color: #777777;
     text-decoration: none; }
-  html body .wrap_header {
+  html body .header {
     position: fixed;
     z-index: 1;
     width: 100%;
     height: 102px;
     background-color: white;
     box-shadow: 0 6px 8px 0 #e4e4e4; }
-    html body .wrap_header header {
+    html body .header header {
       display: flex;
       flex-direction: row;
       justify-content: flex-start;
@@ -79,18 +79,18 @@ html body {
       padding: 0 15px;
       max-width: 1250px;
       height: 102px; }
-      html body .wrap_header header .logo img {
+      html body .header header .logo img {
         margin: 11px auto;
         width: 80px;
         height: 80px; }
-      html body .wrap_header header nav {
+      html body .header header nav {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: stretch;
         margin: auto 0 auto auto;
         background-color: white; }
-        html body .wrap_header header nav ul {
+        html body .header header nav ul {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
@@ -98,13 +98,13 @@ html body {
           margin: 0;
           padding: 0;
           list-style-type: none; }
-          html body .wrap_header header nav ul li {
+          html body .header header nav ul li {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: stretch;
             padding: 10px 20px; }
-            html body .wrap_header header nav ul li button {
+            html body .header header nav ul li button {
               display: flex;
               flex-direction: row;
               justify-content: center;
@@ -120,31 +120,31 @@ html body {
               font-size: 0.875em;
               letter-spacing: 0.3px;
               color: white; }
-            html body .wrap_header header nav ul li button:hover {
+            html body .header header nav ul li button:hover {
               background-color: #3498db;
               cursor: pointer; }
-            html body .wrap_header header nav ul li button:active {
+            html body .header header nav ul li button:active {
               background: radial-gradient(ellipse, #3498db, #337ab7); }
-            html body .wrap_header header nav ul li button:focus {
+            html body .header header nav ul li button:focus {
               outline: none; }
-          html body .wrap_header header nav ul li:hover {
+          html body .header header nav ul li:hover {
             background-color: #eeeeee; }
-            html body .wrap_header header nav ul li:hover a {
+            html body .header header nav ul li:hover a {
               color: #337ab7; }
-          html body .wrap_header header nav ul li:last-child {
+          html body .header header nav ul li:last-child {
             padding: 0 0 0 0; }
-          html body .wrap_header header nav ul li:last-child:hover {
+          html body .header header nav ul li:last-child:hover {
             background-color: transparent; }
-          html body .wrap_header header nav ul a {
+          html body .header header nav ul a {
             font-size: 0.875em;
             color: #777777; }
-      html body .wrap_header header #menu_button {
+      html body .header header #menu_button {
         display: none; }
-  html body .wrap_course {
+  html body .course {
     padding-top: 108px;
     width: 100%;
     background-color: #f7f7f7; }
-    html body .wrap_course .course {
+    html body .course section {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -154,42 +154,42 @@ html body {
       padding: 0 15px;
       max-width: 1250px;
       min-height: 660px; }
-      html body .wrap_course .course .course_description {
+      html body .course section .course_description {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding-top: 194px;
         width: 610px; }
-        html body .wrap_course .course .course_description h2 {
+        html body .course section .course_description h2 {
           text-align: center;
           font-size: 2.1875em;
           font-weight: normal;
           letter-spacing: 0.2px;
           color: #333333;
           margin: 0; }
-        html body .wrap_course .course .course_description p {
+        html body .course section .course_description p {
           margin-top: 25px;
           max-width: 540px;
           text-align: center;
           font-size: 18px;
           letter-spacing: 0;
           line-height: 2rem; }
-      html body .wrap_course .course .course_register {
+      html body .course section .course_register {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: stretch;
         width: 50%;
         padding-top: 49px; }
-        html body .wrap_course .course .course_register legend {
+        html body .course section .course_register legend {
           align-self: flex-start;
           margin: -5px 0 12px 18px;
           font-size: 23px;
           font-weight: 500;
           letter-spacing: 0;
           color: #333333; }
-        html body .wrap_course .course .course_register label {
+        html body .course section .course_register label {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
@@ -197,16 +197,16 @@ html body {
           margin-left: 20px;
           font-size: 14px;
           color: #555555; }
-          html body .wrap_course .course .course_register label span {
+          html body .course section .course_register label span {
             line-height: 18px;
             letter-spacing: 0; }
-          html body .wrap_course .course .course_register label span + img {
+          html body .course section .course_register label span + img {
             display: flex;
             align-self: center;
             margin-left: 4px;
             width: 7px;
             height: 7px; }
-        html body .wrap_course .course .course_register input {
+        html body .course section .course_register input {
           margin-left: 20px;
           padding: 0 15px;
           max-width: 100%;
@@ -218,33 +218,33 @@ html body {
           font-weight: 500;
           letter-spacing: 0.3px;
           color: #777777; }
-        html body .wrap_course .course .course_register input:focus {
+        html body .course section .course_register input:focus {
           outline: none;
           border: 1px solid #3498db;
           box-shadow: 0 0 8px 0 rgba(52, 152, 219, 0.4); }
-        html body .wrap_course .course .course_register label + input {
+        html body .course section .course_register label + input {
           margin-top: 6px; }
-        html body .wrap_course .course .course_register input + label {
+        html body .course section .course_register input + label {
           margin-top: 12px; }
-        html body .wrap_course .course .course_register .block_agree {
+        html body .course section .course_register .block_agree {
           display: flex;
           flex-direction: row;
           justify-content: flex-start;
           align-items: center;
           height: 60px; }
-          html body .wrap_course .course .course_register .block_agree #agree {
+          html body .course section .course_register .block_agree #agree {
             width: 12px;
             height: 12px; }
-          html body .wrap_course .course .course_register .block_agree label {
+          html body .course section .course_register .block_agree label {
             margin: 0 0 0 4px;
             font-size: 14px; }
-            html body .wrap_course .course .course_register .block_agree label span a {
+            html body .course section .course_register .block_agree label span a {
               font-size: 14px;
               letter-spacing: 0;
               color: #337ab7; }
-            html body .wrap_course .course .course_register .block_agree label img {
+            html body .course section .course_register .block_agree label img {
               margin-left: 5px; }
-        html body .wrap_course .course .course_register button {
+        html body .course section .course_register button {
           margin-top: 16px;
           margin-left: 18px;
           align-self: center;
@@ -255,13 +255,25 @@ html body {
           background-color: #337ab7;
           text-transform: uppercase;
           color: white; }
-        html body .wrap_course .course .course_register button:hover {
+        html body .course section .course_register button:hover {
           background-color: #3498db;
           cursor: pointer; }
-        html body .wrap_course .course .course_register button:active {
+        html body .course section .course_register button:active {
           background: radial-gradient(ellipse, #3498db, #337ab7); }
-        html body .wrap_course .course .course_register button:focus {
+        html body .course section .course_register button:focus {
           outline: none; }
+  html body .dev {
+    width: 100%; }
+    html body .dev section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 15px;
+      max-width: 1250px;
+      min-height: 565px; }
 
 @media (max-width: 825px) {
   html body .wrap_header header nav ul li {

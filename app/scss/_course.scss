@@ -1,9 +1,9 @@
-.wrap_course {
+.course {
   padding-top: 108px;
   width: 100%;
   background-color: $grey;
 
-  .course {
+  section {
     @include flex($jus: space-between);
     @include content_block();
     min-height: 660px;
