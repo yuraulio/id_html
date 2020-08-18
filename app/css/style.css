@@ -149,7 +149,8 @@ html body {
       box-sizing: border-box;
       margin: 0 auto;
       padding: 0 15px;
-      max-width: 1250px; }
+      max-width: 1250px;
+      min-height: 660px; }
       html body .wrap_course .course .course_description {
         display: flex;
         flex-direction: column;

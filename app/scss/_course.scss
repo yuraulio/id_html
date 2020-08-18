@@ -6,8 +6,7 @@
   .course {
     @include flex($jus: space-between);
     @include content_block();
-
-    // height: 670px;
+    min-height: 660px;
 
     .course_description {
       @include flex($dir: column, $align: center);
