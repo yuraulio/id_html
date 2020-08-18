@@ -38,7 +38,7 @@
               Сфера IT розвиваєтсья максимально швидко. Зараз дуже популярно здобувати освіту, що повязана з IT. Існує лише<br>одна проблема - брак дійсно кваліфікованих спеціалістів в<br>Україні. Під час навчання в університеті ми отримуємо<br>мало практики і "живих", реальних кейсів. IT школа OxIT<br>створила таку методику навчання, при якій за короткий<br>час ви отримаєте необхідні знання, щоб стати IT<br>спеціалістом. Чекаємо вас на нших курсах з<br>програмування в Луцьку. Старт наступного курсу 3 серпня.
             </p>
           </div>
-          <form class="course_register" action="index.html" method="post">
+          <form id="form_register" class="course_register" action="index.html" method="post">
             <legend>Зареєструватися на курси</legend>
             <label for="name">
               <span>Ім'я</span>
@@ -74,11 +74,12 @@
                 <img src="images/icons/required.png" alt="required">
               </label>
             </div>
-            <button type="button" name="submit">Зареєструватися зараз</button>
+            <button type="submit" name="submit" form="form_register" formaction="index.html">Зареєструватися зараз</button>
           </form>
           </div>
         </section>
       </div>
     <script type="text/javascript" src="js/menu.js"></script>
+    <script type="text/javascript" src="js/join.js"></script>
   </body>
 </html>
