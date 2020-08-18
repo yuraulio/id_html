@@ -11,7 +11,7 @@
 
     .course_description {
       @include flex($dir: column, $align: center);
-      padding-top: 198px;
+      padding-top: 194px;
       width: 610px;
 
       h2 {
@@ -34,23 +34,100 @@
     }
 
     .course_register {
-      @include flex($dir: column, $jus: center, $align: center);
+      @include flex($dir: column, $jus: flex-start);
       max-width: 610px;
+      padding-top: 49px;
+
+      legend {
+        align-self: flex-start;
+        margin: -5px 0 12px 18px;
+        font-size: 23px;
+        font-weight: 500;
+        letter-spacing: 0;
+        color: $header;
+      }
 
       label {
-        @include flex($dir: column, $jus: center, $align: center);
+        @include flex($jus: flex-start, $align: center);
+        margin-left: 20px;
+        font-size: 14px;
+        color: #555555;
 
         span {
-          align-self: flex-start;
+          line-height: 18px;
+          letter-spacing: 0;
         }
 
-        input {
-          width: 590px;
-          height: 50px;
-          border-radius: 5px;
+        span + img {
+          display: flex;
+          align-self: center;
+          margin-left: 4px;
+          width: 7px;
+          height: 7px;
         }
       }
 
+      input {
+        margin-left: 20px;
+        padding: 0 15px;
+        width: 557px;
+        height: 48px;
+        border-radius: 5px;
+        border-width: 1px;
+        border-color: #cccccc;
+        font-family: 'Open Sans';
+        font-weight: 500;
+        letter-spacing: 0.3px;
+        color: $text;
+      }
+
+      label + input {
+        margin-top: 6px;
+      }
+
+      input + label {
+        margin-top: 12px;
+      }
+
+      .block_agree {
+        @include flex($align: center);
+        height: 60px;
+
+        #agree {
+          width: 12px;
+          height: 12px;
+        }
+
+        label {
+          margin: 0 0 0 4px;
+          font-size: 14px;
+
+          span {
+            a {
+              font-size: 14px;
+              letter-spacing: 0;
+              color: $bblue;
+            }
+          }
+
+          img {
+            margin-left: 5px;
+          }
+        }
+      }
+
+      button {
+        margin-top: 16px;
+        margin-left: 18px;
+        align-self: center;
+        width: 370px;
+        height: 50px;
+        border-radius: 25px;
+        border: 0;
+        background-color: $bblue;
+        text-transform: uppercase;
+        color: white;
+      }
     }
   }
 }

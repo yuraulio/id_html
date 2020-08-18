@@ -40,27 +40,40 @@
           </div>
           <form class="course_register" action="index.html" method="post">
             <legend>Зареєструватися на курси</legend>
-            <label for="">
+            <label for="name">
               <span>Ім'я</span>
-              <input type="text" name="name" placeholder="Ім'я">
+              <img src="images/icons/required.png" alt="required">
             </label>
-            <label for="">
+            <input id="name" type="text" name="name" placeholder="Ім'я">
+            <label for="surname">
               <span>Прізвище</span>
-              <input type="text" name="surname" placeholder="Прізвище">
+              <img src="images/icons/required.png" alt="required">
             </label>
-            <label for="">
+            <input id="surname" type="text" name="surname" placeholder="Прізвище">
+            <label for="branch">
               <span>Мене більше цікавить</span>
-              <input type="text" name="branch" placeholder="developer or QA">
+              <img src="images/icons/required.png" alt="required">
             </label>
-            <label for="">
+            <input id="branch" type="text" name="branch" placeholder="developer or QA">
+            <label for="phone">
               <span>Номер телефону</span>
-              <input type="tel" name="phone" placeholder="Номер телефону: +38 XXX XX XX XXX">
+              <img src="images/icons/required.png" alt="required">
             </label>
-            <label for="">
+            <input id="phone" type="tel" name="phone" placeholder="Номер телефону: +38 XXX XX XX XXX">
+            <label for="email">
               <span>Email</span>
-              <input type="email" name="email"  placeholder="Email">
+              <img src="images/icons/required.png" alt="required">
             </label>
-            <label for=""><input type="checkbox" name="agree" value=""><span>Я погоджуюся із <a href="#">Політикою Конфіденційності</a></span></label>
+            <input id="email" type="email" name="email"  placeholder="Email">
+            <div class="block_agree">
+              <input id="agree" type="checkbox" name="agree">
+              <label for="agree">
+                <span>
+                  Я погоджуюся із <a href="#">Політикою Конфіденційності</a>
+                </span>
+                <img src="images/icons/required.png" alt="required">
+              </label>
+            </div>
             <button type="button" name="submit">Зареєструватися зараз</button>
           </form>
           </div>
