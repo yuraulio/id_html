@@ -50,10 +50,15 @@
 
             button:hover {
               background-color: $blue;
+              cursor: pointer;
             }
 
             button:active {
               background: radial-gradient(ellipse, $blue, $bblue);
+            }
+
+            button:focus {
+              outline: none;
             }
         }
 

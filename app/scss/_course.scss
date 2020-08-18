@@ -80,6 +80,12 @@
         color: $text;
       }
 
+      input:focus {
+        outline: none;
+        border: 1px solid $blue;
+        box-shadow: 0 0 8px 0 rgba(52,152,219,0.4);
+      }
+
       label + input {
         margin-top: 6px;
       }
@@ -126,6 +132,19 @@
         background-color: $bblue;
         text-transform: uppercase;
         color: white;
+      }
+
+      button:hover {
+        background-color: $blue;
+        cursor: pointer;
+      }
+
+      button:active {
+        background: radial-gradient(ellipse, $blue, $bblue);
+      }
+
+      button:focus {
+        outline: none;
       }
     }
   }
