@@ -307,6 +307,19 @@ html body {
             font-weight: 300;
             letter-spacing: 0.001em;
             line-height: 25px; }
+  html body .stat {
+    width: 100%;
+    background-color: #3498db; }
+    html body .stat section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 15px;
+      max-width: 1250px;
+      min-height: 310px; }
 
 @media (max-width: 825px) {
   html body .wrap_header header nav ul li {

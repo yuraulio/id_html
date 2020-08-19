@@ -1,0 +1,14 @@
+.stat {
+  width: 100%;
+  background-color: $blue;
+
+  section {
+    @include flex($jus: space-between, $align: center);
+    @include content_block();
+    min-height: 310px;
+
+    .stat_item {
+      
+    }
+  }
+}
