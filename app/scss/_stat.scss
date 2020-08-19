@@ -3,12 +3,31 @@
   background-color: $blue;
 
   section {
-    @include flex($jus: space-between, $align: center);
+    @include flex($jus: space-around, $align: center);
     @include content_block();
     min-height: 310px;
 
     .stat_item {
-      
+      @include flex($dir: column, $jus: center, $align: center);
+      width: 305px;
+
+      img {
+        width: 85px;
+        height: 60px;
+      }
+
+      .stat_hours {
+        margin: 20px 0 10px;
+        font-size: 27px;
+        font-weight: 300;
+        color: #ffffdb;
+      }
+
+      .stat_desc {
+        font-weight: 300;
+        letter-spacing: 0;
+        color: #ffffdb;
+      }
     }
   }
 }

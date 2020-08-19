@@ -313,13 +313,31 @@ html body {
     html body .stat section {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
       box-sizing: border-box;
       margin: 0 auto;
       padding: 0 15px;
       max-width: 1250px;
       min-height: 310px; }
+      html body .stat section .stat_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 305px; }
+        html body .stat section .stat_item img {
+          width: 85px;
+          height: 60px; }
+        html body .stat section .stat_item .stat_hours {
+          margin: 20px 0 10px;
+          font-size: 27px;
+          font-weight: 300;
+          color: #ffffdb; }
+        html body .stat section .stat_item .stat_desc {
+          font-weight: 300;
+          letter-spacing: 0;
+          color: #ffffdb; }
 
 @media (max-width: 825px) {
   html body .wrap_header header nav ul li {
