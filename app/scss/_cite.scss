@@ -1,0 +1,9 @@
+.cite {
+  width: 100%;
+
+  section {
+    @include flex();
+    @include content_block();
+    min-height: 527px;
+  }
+}
