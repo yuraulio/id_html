@@ -1,0 +1,28 @@
+// Основний шрифт
+@mixin font() {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  color: $text;
+}
+
+// Спільні стилі  section
+@mixin content_block {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1220px;
+}
+
+// Виставляє основні параметри для флекс блоків
+@mixin flex(
+        $disp: flex,
+        $dir: row,
+        $jus: flex-start,
+        $align: stretch ) {
+
+  display: $disp;
+  flex-direction: $dir;
+  justify-content: $jus;
+  align-items: $align;
+}

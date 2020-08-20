@@ -1,102 +1,8 @@
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.ttf');
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Bold.ttf');
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-BoldItalic.ttf');
-  font-style: italic;
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-ExtraBold.ttf');
-  font-style: normal;
-  font-weight: 800;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-ExtraBoldItalic.ttf');
-  font-style: italic;
-  font-weight: 800;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Italic.ttf');
-  font-style: italic;
-  font-weight: 400;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Light.ttf');
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-LightItalic.ttf');
-  font-style: italic;
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-SemiBold.ttf');
-  font-style: normal;
-  font-weight: 600;
-}
-@font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-SemiBoldItalic.ttf');
-  font-style: italic;
-  font-weight: 600;
-}
-@font-face {
-  font-family: 'Awesome';
-  src: url('../fonts/fa-solid-900.ttf');
-  font-style: normal;
-  font-weight: 900;
-}
+@import 'fonts'; // Усі підключені шрифти
+@import 'mixins'; // Усі оголошені міксіни
+@import 'vars'; // Усі оголошені змінні
 
-$blue: #3498db;
-$bblue: #337ab7;
-$text: #777777;
-$header: #333333;
-$grey: #f7f7f7;
-
-@mixin font() {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  letter-spacing: 0.3px;
-  color: $text;
-}
-
-@mixin content_block {
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1220px;
-}
-
-@mixin flex(
-        $disp: flex,
-        $dir: row,
-        $jus: flex-start,
-        $align: stretch ) {
-
-  display: $disp;
-  flex-direction: $dir;
-  justify-content: $jus;
-  align-items: $align;
-}
-
+//Варіант сторінки під екрани не менше 1250px
 html {
   body {
     margin: 0px;
@@ -107,12 +13,12 @@ html {
       text-decoration: none;
     }
 
-    @import 'header';
-    @import 'course';
-    @import 'dev';
-    @import 'stat';
-    @import 'cite';
+    @import 'header'; // Шапка сайту з меню
+    @import 'course'; // Курси програмування у Луцьку
+    @import 'dev';    // Курс "Розробка сайтів"
+    @import 'stat';   // Синій блок зі статистикою
+    @import 'cite';   // Блок зі слайдером цитат
   }
 }
 
-@import 'brakepoints';
+@import 'brakepoints'; // Адаптив під екрани шириною менше 1250px
