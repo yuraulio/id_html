@@ -1,0 +1,30 @@
+.mentors {
+  width: 100%;
+
+  section {
+    @include flex($dir: column, $jus: center);
+    @include content_block();
+    min-height: 615px;
+
+    h2 {
+
+    }
+
+    .mentors_item {
+
+      img {
+
+      }
+
+      .mentors_desc {
+        h3 {
+
+        }
+
+        p {
+          
+        }
+      }
+    }
+  }
+}
