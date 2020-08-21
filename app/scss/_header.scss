@@ -31,7 +31,6 @@
 
         li {
           @include flex();
-          padding: 10px 20px;
 
           button {
               @include flex($jus: center, $align: center);
@@ -79,6 +78,7 @@
         }
 
         a {
+          padding: 10px 20px;
           font-size: 0.875em;
           color: $text;
         }

@@ -112,8 +112,7 @@ html body {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: stretch;
-            padding: 10px 20px; }
+            align-items: stretch; }
             html body .header header nav ul li button {
               display: flex;
               flex-direction: row;
@@ -146,6 +145,7 @@ html body {
           html body .header header nav ul li:last-child:hover {
             background-color: transparent; }
           html body .header header nav ul a {
+            padding: 10px 20px;
             font-size: 0.875em;
             color: #777777; }
       html body .header header #menu_button {
