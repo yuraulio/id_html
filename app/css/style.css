@@ -419,6 +419,47 @@ html body {
         line-height: 24px;
         font-weight: 300;
         letter-spacing: 0; }
+  html body .mentors {
+    width: 100%; }
+    html body .mentors section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 auto;
+      padding: 0 15px;
+      max-width: 1220px;
+      padding: 65px 15px;
+      min-height: 615px; }
+      html body .mentors section h2 {
+        margin: 0;
+        text-align: center; }
+      html body .mentors section .mentors_item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%; }
+        html body .mentors section .mentors_item img {
+          width: 337px;
+          height: 356px; }
+        html body .mentors section .mentors_item .mentors_desc {
+          margin-top: 32px;
+          margin-right: 22px;
+          padding-left: 50px;
+          width: 680px; }
+          html body .mentors section .mentors_item .mentors_desc h3 {
+            margin: 0 0 30px;
+            padding: 0 0 15px;
+            color: #3498db;
+            border-bottom: 1px solid #f7f7f7;
+            letter-spacing: 0.05em; }
+          html body .mentors section .mentors_item .mentors_desc p {
+            margin: 13px 0;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 300;
+            letter-spacing: 0; }
 
 @media (max-width: 825px) {
   html body .wrap_header header nav ul li {
