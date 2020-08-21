@@ -4,8 +4,8 @@
   section {
     @include flex($dir: column, $align: center);
     @include content_block();
-    padding: 65px 15px;
-    min-height: 615px;
+    padding: 65px 15px 82px; // Надлишок нижнього падінгу для заповнення, поки нема крапочок слайдера
+    // min-height: 615px;
 
     h2 {
       margin: 0;
@@ -17,6 +17,7 @@
       width: 100%;
 
       img {
+        margin-left: 75px;
         width: 337px;
         height: 356px;
       }
