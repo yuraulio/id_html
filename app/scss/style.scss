@@ -13,11 +13,20 @@ html {
       text-decoration: none;
     }
 
+    h2 {
+      font-size: 34px;
+      font-family: 'Open Sans';
+      font-weight: normal;
+      letter-spacing: 0.002em;
+      color: $header;
+    }
+
     @import 'header'; // Шапка сайту з меню
     @import 'course'; // Курси програмування у Луцьку
     @import 'dev';    // Курс "Розробка сайтів"
     @import 'stat';   // Синій блок зі статистикою
     @import 'cite';   // Блок зі слайдером цитат
+    @import 'video';  // Блок з ютуб відео
   }
 }
 
