@@ -4,9 +4,11 @@
 
 //Варіант сторінки під екрани не менше 1250px
 html {
+  @include font();
   body {
+    // background-color: blue;
+    @include flex($dir: column, $align: center);
     margin: 0px;
-    @include font();
 
     a {
       @include font();
