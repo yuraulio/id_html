@@ -23,6 +23,17 @@ html {
       color: $header;
     }
 
+    .anchor {
+      position: relative;
+
+      #dev, #cite, #video, #mentors {
+        position: absolute;
+        top: -100px;
+      }
+    }
+
+
+
     @import 'header'; // Шапка сайту з меню
     @import 'course'; // Курси програмування у Луцьку
     @import 'dev';    // Курс "Розробка сайтів"

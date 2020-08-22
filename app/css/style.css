@@ -74,6 +74,11 @@ html {
       font-weight: normal;
       letter-spacing: 0.002em;
       color: #333333; }
+    html body .anchor {
+      position: relative; }
+      html body .anchor #dev, html body .anchor #cite, html body .anchor #video, html body .anchor #mentors {
+        position: absolute;
+        top: -100px; }
     html body .header {
       position: fixed;
       z-index: 1;
@@ -154,7 +159,7 @@ html {
         html body .header header #menu_button {
           display: none; }
     html body .course {
-      padding-top: 108px;
+      padding-top: 107px;
       width: 100%;
       background-color: #f7f7f7; }
       html body .course section {
