@@ -5,20 +5,21 @@
   footer {
     @include flex($dir: column, $jus: center, $align: center);
     @include content_block;
-    height: 156px;
+    height: 154px;
     font-size: 14px;
     letter-spacing: 0;
 
     span:first-child {
+      font-weight: 300;
       color: $blue;
-      line-height: 24px;
+      line-height: 36px;
     }
 
     span:last-child {
       a {
-        letter-spacing: 0;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 36px;
+        font-weight: 300;
       }
 
       a:hover {

@@ -5,7 +5,7 @@
     @include flex($dir: column, $align: center);
     @include content_block();
     padding: 65px 15px;
-    // min-height: 527px;
+    min-height: 398px;
 
     h2 {
       margin: 0;
@@ -21,7 +21,7 @@
         position: relative;
         font-size: 22px;
         line-height: 1.7em;
-        letter-spacing: 0.001em;
+        font-weight: 300;
       }
 
       > p:before {
