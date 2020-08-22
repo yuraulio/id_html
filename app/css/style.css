@@ -58,6 +58,9 @@ html {
   font-size: 16px;
   color: #666666; }
   html body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #666666;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -69,10 +72,10 @@ html {
       color: #666666;
       text-decoration: none; }
     html body h2 {
+      margin: 0;
       font-size: 34px;
       font-family: 'Open Sans';
-      font-weight: normal;
-      letter-spacing: 0.002em;
+      font-weight: 400;
       color: #333333; }
     html body .anchor {
       position: relative; }
@@ -165,54 +168,49 @@ html {
       html body .course section {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: stretch;
         margin: 0 auto;
         padding: 0 15px;
-        max-width: 1220px;
-        min-height: 660px; }
+        max-width: 1220px; }
         html body .course section .course_description {
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           align-items: center;
-          padding-top: 194px;
+          padding-top: 192px;
           width: 610px; }
           html body .course section .course_description h2 {
-            text-align: center;
-            font-size: 2.1875em;
-            font-weight: 400;
-            letter-spacing: 0.01px;
-            color: #333333;
-            margin: 0; }
+            letter-spacing: 0.022em; }
           html body .course section .course_description p {
             margin-top: 25px;
             max-width: 540px;
             text-align: center;
             font-size: 18px;
-            letter-spacing: 0;
-            line-height: 2rem; }
+            line-height: 2rem;
+            font-weight: 300; }
         html body .course section .course_register {
+          box-sizing: border-box;
           display: flex;
           flex-direction: column;
           justify-content: flex-start;
           align-items: stretch;
-          width: 50%;
-          padding-top: 49px; }
+          width: 610px;
+          padding-top: 43px;
+          padding-left: 20px; }
           html body .course section .course_register legend {
             align-self: flex-start;
-            margin: -5px 0 12px 18px;
+            margin: 0 0 12px -2px;
             font-size: 23px;
             font-weight: 500;
-            letter-spacing: 0;
             color: #333333; }
           html body .course section .course_register label {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            margin-left: 20px;
             font-size: 14px;
+            font-weight: 300;
             color: #555555; }
             html body .course section .course_register label span {
               line-height: 18px;
@@ -224,16 +222,14 @@ html {
               width: 7px;
               height: 7px; }
           html body .course section .course_register input {
-            margin-left: 20px;
             padding: 0 15px;
             max-width: 100%;
-            height: 48px;
+            height: 50px;
             border-radius: 5px;
-            border-width: 1px;
-            border-color: #cccccc;
+            border: 1px solid #bababa;
             font-family: 'Open Sans';
+            font-size: 0.875em;
             font-weight: 500;
-            letter-spacing: 0.3px;
             color: #666666; }
           html body .course section .course_register input:focus {
             outline: none;
@@ -242,34 +238,39 @@ html {
           html body .course section .course_register label + input {
             margin-top: 6px; }
           html body .course section .course_register input + label {
-            margin-top: 12px; }
+            margin-top: 10px; }
           html body .course section .course_register .block_agree {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            height: 60px; }
+            margin-top: 20px; }
             html body .course section .course_register .block_agree #agree {
-              width: 12px;
-              height: 12px; }
+              box-sizing: border-box;
+              margin: 0;
+              width: 13px;
+              height: 13px;
+              border: 1px solid; }
             html body .course section .course_register .block_agree label {
-              margin: 0 0 0 4px;
+              margin: 0 0 0 7px;
               font-size: 14px; }
               html body .course section .course_register .block_agree label span a {
                 font-size: 14px;
                 letter-spacing: 0;
                 color: #337ab7; }
               html body .course section .course_register .block_agree label img {
-                margin-left: 5px; }
+                margin-left: 6px; }
           html body .course section .course_register button {
-            margin-top: 16px;
-            margin-left: 18px;
+            margin-top: 36px;
+            margin-bottom: 28px;
             align-self: center;
             width: 370px;
             height: 50px;
             border-radius: 25px;
             border: 0;
             background-color: #337ab7;
+            font-family: 'Open Sans';
+            font-size: 14px;
             text-transform: uppercase;
             color: white; }
           html body .course section .course_register button:hover {
@@ -291,7 +292,7 @@ html {
         max-width: 1220px;
         min-height: 565px; }
         html body .dev section h2 {
-          margin: 67px 0 32px; }
+          margin: 67px 0 30px; }
         html body .dev section .dev_items {
           display: flex;
           flex-direction: row;
@@ -310,7 +311,7 @@ html {
               text-align: center;
               font-size: 24px;
               font-weight: 300;
-              letter-spacing: 0.45px;
+              letter-spacing: 0.019em;
               border-bottom: 1px solid #3498db; }
             html body .dev section .dev_items .dev_item p {
               text-align: center;

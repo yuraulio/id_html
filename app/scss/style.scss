@@ -6,6 +6,7 @@
 html {
   @include font();
   body {
+    @include font();
     // background-color: blue;
     @include flex($dir: column, $align: center);
     margin: 0px;
@@ -16,10 +17,10 @@ html {
     }
 
     h2 {
+      margin: 0;
       font-size: 34px;
       font-family: 'Open Sans';
-      font-weight: normal;
-      letter-spacing: 0.002em;
+      font-weight: 400;
       color: $header;
     }
 
