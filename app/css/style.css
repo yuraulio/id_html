@@ -352,19 +352,22 @@ html {
     html body .cite {
       width: 100%; }
       html body .cite section {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
         margin: 0 auto;
         padding: 0 15px;
         max-width: 1220px;
         padding: 65px 15px;
-        min-height: 398px; }
+        min-height: 398px;
+        min-width: 0;
+        overflow: hidden; }
         html body .cite section h2 {
-          margin: 0; }
+          margin: 0;
+          text-align: center; }
+        html body .cite section .cites .slick-dots li {
+          margin: 0 3px; }
+          html body .cite section .cites .slick-dots li button:before {
+            font-size: 14px; }
         html body .cite section blockquote {
-          margin: 3px 0 0;
+          margin: 0 auto 109px;
           width: 900px;
           text-align: center;
           color: #666666; }
@@ -373,23 +376,6 @@ html {
             font-size: 22px;
             line-height: 1.7em;
             font-weight: 300; }
-          html body .cite section blockquote > p:before {
-            position: absolute;
-            left: -38px;
-            top: -15px;
-            content: "\f10d";
-            font-family: 'Awesome';
-            font-size: 30px;
-            line-height: 30px;
-            color: #c4c4c4; }
-          html body .cite section blockquote > p:after {
-            position: absolute;
-            right: -38px;
-            bottom: -4px;
-            content: "\f10e";
-            font-family: 'Awesome';
-            font-size: 30px;
-            color: #c4c4c4; }
           html body .cite section blockquote figcaption {
             margin-top: 30px; }
             html body .cite section blockquote figcaption > p {
