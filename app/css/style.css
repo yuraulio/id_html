@@ -632,9 +632,9 @@ html {
         padding: 65px 0;
         min-width: 870px; }
         html body .video section h2 {
-          margin: 0; }
+          margin: 0 0 18px; }
         html body .video section p {
-          margin: 18px 0 32px;
+          margin: 0 0 32px;
           text-align: center;
           font-size: 18px;
           line-height: 24px;
