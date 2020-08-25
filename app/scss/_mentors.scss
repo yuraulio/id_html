@@ -5,11 +5,8 @@
     @include content_block();
     padding: 65px 15px 55px;
 
-    h2 {
-      margin: 0;
-      text-align: center;
-    }
     .mentors_item_wrapper {
+      
       .mentors_item {
         @include flex($jus: space-between, $align: flex-start);
 

@@ -26,11 +26,16 @@
         font-weight: 600;
       }
 
-      span:last-child {
+      a {
         margin-top: 5px;
         font-size: 14px;
         font-weight: 300;
         letter-spacing: 0;
+        color: white;
+      }
+
+      a:hover {
+        text-decoration: underline;
       }
     }
   }

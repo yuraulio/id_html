@@ -281,7 +281,8 @@ html {
       font-size: 34px;
       font-family: 'Open Sans';
       font-weight: 400;
-      color: #333333; }
+      color: #333333;
+      text-align: center; }
     html body .anchor {
       position: relative; }
       html body .anchor #dev, html body .anchor #cite, html body .anchor #video, html body .anchor #mentors {
@@ -568,12 +569,7 @@ html {
         padding: 0 15px;
         max-width: 1220px;
         padding: 65px 15px 30px;
-        min-height: 398px;
-        min-width: 0;
-        overflow: hidden; }
-        html body .cite section h2 {
-          margin: 0 0 3px;
-          text-align: center; }
+        min-height: 398px; }
         html body .cite section blockquote {
           margin: 0 auto 105px;
           width: 900px;
@@ -647,9 +643,6 @@ html {
         padding: 0 15px;
         max-width: 1220px;
         padding: 65px 15px 55px; }
-        html body .mentors section h2 {
-          margin: 0;
-          text-align: center; }
         html body .mentors section .mentors_item_wrapper .mentors_item {
           display: flex;
           flex-direction: row;
@@ -708,11 +701,14 @@ html {
             height: 50px; }
           html body .contact section .contact_item span {
             font-weight: 600; }
-          html body .contact section .contact_item span:last-child {
+          html body .contact section .contact_item a {
             margin-top: 5px;
             font-size: 14px;
             font-weight: 300;
-            letter-spacing: 0; }
+            letter-spacing: 0;
+            color: white; }
+          html body .contact section .contact_item a:hover {
+            text-decoration: underline; }
     html body .footer {
       width: 100%;
       background-color: #f7f7f7; }
@@ -749,10 +745,13 @@ html {
     height: 70px; }
     html body .header header {
       height: 70px; }
-      html body .header header .logo img {
-        margin: 5px auto;
+      html body .header header .logo {
         width: 60px;
-        height: 60px; }
+        height: 70px; }
+        html body .header header .logo img {
+          margin: 5px auto;
+          width: 60px;
+          height: 60px; }
       html body .header header nav {
         display: none;
         position: fixed;
