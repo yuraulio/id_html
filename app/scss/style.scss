@@ -35,6 +35,16 @@ html {
       }
     }
 
+    .slick-dots {
+      li {
+        margin: 0 3px;
+
+        button:before {
+          font-size: 14px;
+        }
+      }
+    }
+
 
 
     @import 'header'; // Шапка сайту з меню
