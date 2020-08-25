@@ -504,11 +504,11 @@ html {
         html body .dev section .dev_items {
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;
+          justify-content: space-around;
           align-items: flex-start;
           width: 100%; }
           html body .dev section .dev_items .dev_item {
-            min-width: 0;
+            margin: 0 auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -523,6 +523,7 @@ html {
               letter-spacing: 0.019em;
               border-bottom: 1px solid #3498db; }
             html body .dev section .dev_items .dev_item p {
+              width: 350px;
               text-align: center;
               font-size: 16px;
               font-weight: 300;
