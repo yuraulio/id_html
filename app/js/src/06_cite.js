@@ -3,6 +3,9 @@ $(document).ready(function(){
     dots: true,
     infinite: true,
     arrows: false,
-    slidesToShow: 1
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    fade: true
   });
 });
