@@ -11,6 +11,7 @@
   "devDependencies": {
     "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-notify": "^3.2.0",
     "gulp-scss": "^1.4.0"
   },

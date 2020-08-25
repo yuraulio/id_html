@@ -1,12 +1,14 @@
 @media (max-width: 825px) {
   html {
     body {
-      .wrap_header {
+      .header {
         header {
           nav {
             ul {
               li {
-                padding: 10px 10px;
+                a {
+                  padding: 10px 10px;
+                }
               }
             }
           }
@@ -19,12 +21,14 @@
 @media (max-width: 725px) {
   html {
     body {
-      .wrap_header {
+      .header {
         header {
           nav {
             ul {
               li {
-                padding: 10px 5px;
+                a {
+                  padding: 10px 5px;
+                }
               }
             }
           }
@@ -37,7 +41,7 @@
 @media (max-width: 685px) {
   html {
     body {
-      .wrap_header {
+      .header {
         height: 70px;
 
         header {
@@ -63,7 +67,9 @@
               flex-direction: column;
 
               li {
-                padding: 10px 20px;;
+                a {
+                  padding: 10px 20px;
+                }
               }
 
               li:last-child {
@@ -104,7 +110,7 @@
         }
       }
 
-      .wrap_course {
+      .course {
         padding-top: 78px;
       }
     }
