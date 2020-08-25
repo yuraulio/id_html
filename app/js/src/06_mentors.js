@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $('.cites').slick({
+  $('.mentors_items').slick({
     dots: true,
     infinite: true,
     arrows: false,

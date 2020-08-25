@@ -2,46 +2,44 @@
   width: 100%;
 
   section {
-    @include flex($dir: column, $align: center);
     @include content_block();
-    padding: 65px 15px 84px; // Надлишок нижнього падінгу для заповнення, поки нема крапочок слайдера
-    // min-height: 615px;
+    padding: 65px 15px 55px;
 
     h2 {
       margin: 0;
       text-align: center;
     }
+    .mentors_item_wrapper {
+      .mentors_item {
+        @include flex($jus: space-between, $align: flex-start);
 
-    .mentors_item {
-      @include flex($jus: space-between, $align: flex-start);
-      width: 100%;
-
-      img {
-        margin-left: 75px;
-        width: 337px;
-        height: 356px;
-      }
-
-      .mentors_desc {
-        margin-top: 32px;
-        margin-right: 22px;
-        padding-left: 50px;
-        width: 680px;
-
-        h3 {
-          margin: 0 0 30px;
-          padding: 0 0 15px;
-          color: $blue;
-          border-bottom: 1px solid $grey;
-          letter-spacing: 0.05em;
+        img {
+          margin-left: 75px;
+          width: 337px;
+          height: 356px;
         }
 
-        p {
-          margin: 13px 0;
-          font-size: 16px;
-          line-height: 24px;
-          font-weight: 300;
-          letter-spacing: 0;
+        .mentors_desc {
+          margin-top: 32px;
+          margin-right: 22px;
+          padding-left: 50px;
+          width: 680px;
+
+          h3 {
+            margin: 0 0 30px;
+            padding: 0 0 15px;
+            color: $blue;
+            border-bottom: 1px solid $grey;
+            letter-spacing: 0.05em;
+          }
+
+          p {
+            margin: 13px 0;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 300;
+            letter-spacing: 0;
+          }
         }
       }
     }
