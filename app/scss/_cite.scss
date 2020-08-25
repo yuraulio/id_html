@@ -4,16 +4,17 @@
   section {
     // @include flex($dir: column, $align: center);
     @include content_block();
-    padding: 65px 15px 30px;
+    padding: 65px 15px 29px;
     min-height: 398px;
-    
+
     blockquote {
-      margin: 0 auto 105px;
+      margin: 0 auto 107px;
       width: 900px;
       text-align: center;
       color: $text;
 
       > p {
+        margin-top: 24px;
         position: relative;
         font-size: 22px;
         line-height: 1.7em;

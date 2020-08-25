@@ -383,17 +383,13 @@ html {
         padding: 0 15px;
         max-width: 1220px; }
         html body .course section .course_description {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center;
           padding-top: 192px;
-          width: 610px; }
+          width: 50%; }
           html body .course section .course_description h2 {
             letter-spacing: 0.022em; }
           html body .course section .course_description p {
-            margin-top: 25px;
-            max-width: 540px;
+            margin: 25px auto 0;
+            width: 500px;
             text-align: center;
             font-size: 18px;
             line-height: 2rem;
@@ -404,7 +400,7 @@ html {
           flex-direction: column;
           justify-content: flex-start;
           align-items: stretch;
-          width: 610px;
+          width: 50%;
           padding-top: 43px;
           padding-left: 20px; }
           html body .course section .course_register legend {
@@ -431,8 +427,9 @@ html {
               width: 7px;
               height: 7px; }
           html body .course section .course_register input {
+            box-sizing: border-box;
             padding: 0 15px;
-            max-width: 100%;
+            width: 100%;
             height: 50px;
             border-radius: 5px;
             border: 1px solid #bababa;
@@ -447,13 +444,13 @@ html {
           html body .course section .course_register label + input {
             margin-top: 6px; }
           html body .course section .course_register input + label {
-            margin-top: 10px; }
+            margin-top: 12px; }
           html body .course section .course_register .block_agree {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
             align-items: center;
-            margin-top: 20px; }
+            margin-top: 22px; }
             html body .course section .course_register .block_agree #agree {
               box-sizing: border-box;
               margin: 0;
@@ -471,7 +468,7 @@ html {
                 margin-left: 6px; }
           html body .course section .course_register button {
             margin-top: 36px;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
             align-self: center;
             width: 370px;
             height: 50px;
@@ -568,14 +565,15 @@ html {
         margin: 0 auto;
         padding: 0 15px;
         max-width: 1220px;
-        padding: 65px 15px 30px;
+        padding: 65px 15px 29px;
         min-height: 398px; }
         html body .cite section blockquote {
-          margin: 0 auto 105px;
+          margin: 0 auto 107px;
           width: 900px;
           text-align: center;
           color: #666666; }
           html body .cite section blockquote > p {
+            margin-top: 24px;
             position: relative;
             font-size: 22px;
             line-height: 1.7em;
@@ -625,12 +623,11 @@ html {
         margin: 0 auto;
         padding: 0 15px;
         max-width: 1220px;
-        padding: 65px 0;
-        min-width: 870px; }
+        padding: 65px 15px; }
         html body .video section h2 {
           margin: 0 0 18px; }
         html body .video section p {
-          margin: 0 0 32px;
+          margin: 2px 0 30px;
           text-align: center;
           font-size: 18px;
           line-height: 24px;
@@ -734,6 +731,10 @@ html {
         html body .footer footer span:last-child a:hover {
           text-decoration: underline; }
 
+@media (max-width: 1020px) {
+  html body .video section iframe {
+    width: 100%;
+    height: 50vw; } }
 @media (max-width: 825px) {
   html body .header header nav ul li a {
     padding: 10px 10px; } }
