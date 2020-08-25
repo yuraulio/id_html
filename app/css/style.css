@@ -504,10 +504,11 @@ html {
         html body .dev section .dev_items {
           display: flex;
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: space-evenly;
           align-items: flex-start;
           width: 100%; }
           html body .dev section .dev_items .dev_item {
+            min-width: 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -527,6 +528,8 @@ html {
               font-weight: 300;
               letter-spacing: 0.001em;
               line-height: 25px; }
+    html body .slick-track {
+      overflow: hidden; }
     html body .stat {
       width: 100%;
       background-color: #3498db; }

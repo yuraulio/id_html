@@ -12,10 +12,12 @@
     }
 
     .dev_items {
-      @include flex($jus: space-around, $align: flex-start);
+      @include flex($jus: space-evenly, $align: flex-start);
       width: 100%;
 
+
       .dev_item {
+        min-width: 0;
         @include flex($dir: column, $jus: center, $align: center);
         width: 350px;
 
@@ -39,4 +41,9 @@
       }
     }
   }
+}
+
+// Стилі, коли увімкнутий слайдер
+.slick-track {
+  overflow: hidden;
 }
