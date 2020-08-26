@@ -12,13 +12,14 @@
     }
 
     .dev_items {
-      @include flex($jus: space-around, $align: flex-start);
+      @include flex($jus: space-around, $align: stretch);
       width: 100%;
+      user-select: text;
 
       .dev_item {
-        margin: 0 auto;
         @include flex($dir: column, $jus: center, $align: center);
-        width: 350px;
+        // margin-left: 15px;
+        width: 100%;
 
         h3 {
           margin: 15px 0;
@@ -31,7 +32,7 @@
         }
 
         p {
-          width: 350px;
+          max-width: 350px;
           text-align: center;
           font-size: 16px;
           font-weight: 300;
@@ -39,10 +40,11 @@
           line-height: 25px;
         }
       }
+
+
     }
   }
 }
-
 // Стилі, коли увімкнутий слайдер
 .slick-track {
   overflow: hidden;
