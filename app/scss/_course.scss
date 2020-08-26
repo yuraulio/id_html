@@ -111,8 +111,15 @@
             }
           }
 
-          img {
-            margin-left: 6px;
+          span:after {
+            display: inline-block;
+            margin-left: 1px;
+            margin-bottom: 1px;
+            content: '';
+            width: 7px;
+            height: 7px;
+            background-image: url('../images/icons/required.png');
+            background-size: 7px 7px;
           }
         }
       }
