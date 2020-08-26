@@ -2,7 +2,7 @@ $(document).ready(function() {
   $('.dev_items').slick({
     rows: 0,
     dots: true,
-    // infinite: true,
+    infinite: true,
     arrows: false,
     slidesToShow: 3,
     responsive: [{
@@ -18,13 +18,6 @@ $(document).ready(function() {
         slidesToShow: 2,
       }
 
-    }, {
-
-    breakpoint: 1220,
-    settings: {
-      slidesToShow: 3,
-    }
-
-  }]
+    }]
   });
 });

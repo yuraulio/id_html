@@ -496,45 +496,47 @@ html {
     html body .dev {
       width: 100%; }
       html body .dev section {
-        min-height: 500px;
         margin: 0 auto;
         padding: 0 15px;
         max-width: 1220px;
-        padding: 65px 15px 0; }
+        padding: 65px 15px 60px; }
         html body .dev section h2 {
           margin: 0 0 30px; }
         html body .dev section .dev_items {
-          display: flex;
-          justify-content: space-around;
-          user-select: text;
+          margin-bottom: 30px;
           width: 100%; }
-          html body .dev section .dev_items .slick-track {
-            display: flex;
-            justify-content: space-evenly; }
           html body .dev section .dev_items .dev_item + .dev_item {
             padding-left: 15px; }
           html body .dev section .dev_items .dev_item {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            width: 406px;
-            min-width: 280px; }
+            min-width: 0;
+            text-align: center;
+            vertical-align: top; }
+            html body .dev section .dev_items .dev_item img {
+              display: block;
+              margin: 0 auto; }
             html body .dev section .dev_items .dev_item h3 {
-              margin: 16px 0 14px;
+              display: inline-block;
+              margin: 16px auto 30px;
               padding: 0 0 17px;
               text-align: center;
               font-size: 24px;
               font-weight: 300;
-              letter-spacing: 0.019em;
+              letter-spacing: 0.02em;
               border-bottom: 1px solid #3498db; }
             html body .dev section .dev_items .dev_item p {
-              max-width: 350px;
+              margin: 0 auto;
+              max-width: 342px;
               text-align: center;
               font-size: 16px;
               font-weight: 300;
               letter-spacing: 0.001em;
               line-height: 25px; }
+    html body .slick-slide {
+      float: none; }
+    html body .slick-track {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; }
     html body .stat {
       width: 100%;
       background-color: #3498db; }
@@ -748,9 +750,7 @@ html {
   html body .video section iframe {
     width: 100%;
     height: 50vw; } }
-@media (max-width: 825px) {
-  html body .header header nav ul li a {
-    padding: 10px 10px; }
+@media (max-width: 850px) {
   html body .course section {
     flex-direction: column;
     align-items: center; }
@@ -765,10 +765,15 @@ html {
       html body .course section .course_register legend {
         align-self: center; }
       html body .course section .course_register input {
-        width: 400px; } }
+        width: 100%; } }
+@media (max-width: 825px) {
+  html body .header header nav ul li a {
+    padding: 10px 10px; } }
 @media (max-width: 725px) {
   html body .header header nav ul li a {
-    padding: 10px 5px; } }
+    padding: 10px 5px; }
+  html body .dev .dev_items .dev_item {
+    min-width: 300px; } }
 @media (max-width: 685px) {
   html body .header {
     height: 70px; }
@@ -854,4 +859,16 @@ html {
         height: 15px; }
     html body .course section .course_register button {
       width: 278px;
-      padding: 0; } }
+      padding: 0; }
+  html body .dev section h2 {
+    font-size: 24px; }
+  html body .dev section .dev_items .dev_item h3 {
+    font-size: 21px;
+    padding: 0;
+    margin: 16px auto 13px; }
+  html body .dev section .dev_items .dev_item p {
+    margin: 0 auto 42px;
+    width: 300px;
+    font-size: 14px;
+    max-width: 260px;
+    line-height: 22px; } }
