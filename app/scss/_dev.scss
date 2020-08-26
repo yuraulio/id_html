@@ -2,33 +2,42 @@
   width: 100%;
 
   section {
-    @include flex($dir: column, $jus: flex-start, $align: center);
+    // @include flex($dir: column, $jus: flex-start, $align: center);
+    min-height: 500px;
     @include content_block();
-    min-height: 565px;
+    padding: 65px 15px 0;
 
 
     h2 {
-      margin: 67px 0 30px;
+      margin: 0 0 30px;
     }
 
     .dev_items {
-      @include flex($jus: space-around, $align: stretch);
-      width: 100%;
+      display: flex;
+      justify-content: space-around;
       user-select: text;
+      width: 100%;
+
+      .slick-track {
+        display: flex;
+        justify-content: space-evenly;
+      }
 
       .dev_item {
-        @include flex($dir: column, $jus: center, $align: center);
-        // margin-left: 15px;
-        width: 100%;
+        @include flex($dir: column, $jus: flex-start, $align: center);
+        padding: 0 10px;
+        width: 406px;
+        min-width: 280px;
 
         h3 {
-          margin: 15px 0;
+          margin: 16px 0 14px;
           padding: 0 0 17px;
           text-align: center;
           font-size: 24px;
           font-weight: 300;
           letter-spacing: 0.019em;
           border-bottom: 1px solid $blue;
+
         }
 
         p {
@@ -44,8 +53,4 @@
 
     }
   }
-}
-// Стилі, коли увімкнутий слайдер
-.slick-track {
-  overflow: hidden;
 }
