@@ -23,9 +23,12 @@
         justify-content: space-evenly;
       }
 
+      .dev_item + .dev_item {
+        padding-left: 15px;
+      }
+
       .dev_item {
         @include flex($dir: column, $jus: flex-start, $align: center);
-        padding: 0 10px;
         width: 406px;
         min-width: 280px;
 
