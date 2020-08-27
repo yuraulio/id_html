@@ -1,3 +1,4 @@
+// Слайдер блоку dev
 $(document).ready(function() {
   $('.dev_items').slick({
     rows: 0,

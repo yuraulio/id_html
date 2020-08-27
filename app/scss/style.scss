@@ -27,16 +27,18 @@ html {
       text-align: center;
     }
 
+    // Якорі для переходу до розділів сайту
+    // з відступом, щоб не залазило під header
     .anchor {
       position: relative;
 
-      #dev, #cite, #video, #mentors {
+      #c_reg, #dev, #cite, #video, #mentors {
         position: absolute;
         top: -100px;
       }
     }
 
-    .slick-dots {
+    .slick-dots { // Робимо дотси слайдера потрібного розміру
       li {
         margin: 0 3px;
 

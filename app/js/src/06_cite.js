@@ -1,3 +1,4 @@
+// Слайдер блоку cite з відгуками
 $(document).ready(function(){
   $('.cites').slick({
     dots: true,

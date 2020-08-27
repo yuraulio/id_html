@@ -13884,7 +13884,20 @@ return jQuery;
 }));
 
 let menu = document.querySelector('html body .header header nav');
+// Вибираємо nav з головним меню
 
+// На клік по пункту головного меню вішаємо подію,
+// щоб при кліку на пункт меню у мобільному режимі, меню закривалось
+for (let menu_item of document.querySelectorAll('html body .header header nav ul li')) {
+  menu_item.onclick = () => {
+    if (menu.classList.contains('open_menu')) {
+      menu.classList.remove('open_menu');
+    }
+  }
+}
+
+// При кліку на кнопку меню в мобільному режимі
+// закриваємо-відкриваємо меню
 document.getElementById('menu_button').onclick = () => {
   if (menu.classList.contains('open_menu')) {
     menu.classList.remove('open_menu');
@@ -13893,10 +13906,24 @@ document.getElementById('menu_button').onclick = () => {
   }
 }
 
+// Якщо з відкритим в мобільному режимі меню перейшли
+// у режим десктоп, то закриваємо мобільне меню
+$(window).resize(function() {
+  if ($(document).width() > 685) {
+    if (menu.classList.contains('open_menu')) {
+      menu.classList.remove('open_menu');
+    }
+  }
+})
+
+// При кліку по кнопці Подати заявку прокручуємо сторінку
+// до заголовка форми і ставимо фокус у перший input
 document.querySelector('html body .header header nav ul li button').onclick = () => {
+  document.getElementById('c_reg').scrollIntoView();
   document.getElementById('name').focus();
 }
 
+// Слайдер блоку dev
 $(document).ready(function() {
   $('.dev_items').slick({
     rows: 0,
@@ -13921,6 +13948,7 @@ $(document).ready(function() {
   });
 });
 
+// Слайдер блоку cite з відгуками
 $(document).ready(function(){
   $('.cites').slick({
     dots: true,
@@ -13933,6 +13961,7 @@ $(document).ready(function(){
   });
 });
 
+// Слайдер блоку mentors
 $(document).ready(function(){
   $('.mentors_items').slick({
     dots: true,

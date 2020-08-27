@@ -1,3 +1,4 @@
+// Слайдер блоку mentors
 $(document).ready(function(){
   $('.mentors_items').slick({
     dots: true,
