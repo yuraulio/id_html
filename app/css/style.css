@@ -547,14 +547,15 @@ html {
         align-items: center;
         margin: 0 auto;
         padding: 0 15px;
-        max-width: 1220px;
-        min-height: 310px; }
+        max-width: 1220px; }
         html body .stat section .stat_item {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: 305px; }
+          width: calc((100vw - 30px) / 4);
+          height: 150px;
+          margin: 80px 0; }
           html body .stat section .stat_item img {
             width: 85px;
             height: 60px; }
@@ -566,7 +567,8 @@ html {
           html body .stat section .stat_item .stat_desc {
             font-weight: 300;
             letter-spacing: 0;
-            color: #ffffdb; }
+            color: #ffffdb;
+            text-align: center; }
     html body .cite {
       width: 100%; }
       html body .cite section {
@@ -577,7 +579,7 @@ html {
         min-height: 398px; }
         html body .cite section blockquote {
           margin: 0 auto 107px;
-          width: 900px;
+          max-width: 73.8%;
           text-align: center;
           color: #666666; }
           html body .cite section blockquote > p {
@@ -825,7 +827,26 @@ html {
       html body .header header #menu_button:active {
         background: radial-gradient(ellipse, #3498db, #337ab7); }
   html body .course {
-    padding-top: 78px; } }
+    padding-top: 78px; }
+  html body .stat section {
+    height: 340px;
+    flex-wrap: wrap;
+    align-items: stretch; }
+    html body .stat section .stat_item {
+      width: calc((100vw - 30px) / 2);
+      height: 100px;
+      margin: 0; }
+      html body .stat section .stat_item .stat_hours {
+        margin: 5px 0 5px;
+        font-size: 16px; }
+      html body .stat section .stat_item .stat_desc {
+        font-size: 12px; }
+    html body .stat section .stat_item:nth-child(-n+2) {
+      margin: 44px 0 0; }
+    html body .stat section .stat_item:nth-child(3) {
+      margin: 0 0 26px; }
+    html body .stat section .stat_item:nth-child(4) {
+      margin: 7px 0 0; } }
 @media (max-width: 529px) {
   html body .course section .course_description h2 {
     font-size: 30px; }
@@ -871,4 +892,30 @@ html {
     width: 300px;
     font-size: 14px;
     max-width: 260px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  html body .cite section {
+    padding: 30px 15px 0; }
+    html body .cite section h2 {
+      font-size: 24px; }
+    html body .cite section blockquote {
+      max-width: 100%;
+      margin: 10px 0 0; }
+      html body .cite section blockquote p {
+        width: 260px;
+        margin: 0 auto;
+        font-size: 14px;
+        line-height: 21px; }
+      html body .cite section blockquote p:before {
+        font-size: 14px;
+        left: -15px;
+        top: -2px; }
+      html body .cite section blockquote p:after {
+        font-size: 14px;
+        right: -15px;
+        bottom: 6px; }
+      html body .cite section blockquote figcaption {
+        margin-top: 16px; }
+        html body .cite section blockquote figcaption p span:first-child {
+          font-size: 14px; }
+        html body .cite section blockquote figcaption p span:last-child {
+          margin: 0; } }

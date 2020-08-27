@@ -5,11 +5,14 @@
   section {
     @include flex($jus: space-around, $align: center);
     @include content_block();
-    min-height: 310px;
+    // flex-wrap: wrap;
+    // min-height: 310px;
 
     .stat_item {
       @include flex($dir: column, $jus: center, $align: center);
-      width: 305px;
+      width: calc((100vw - 30px) / 4);
+      height: 150px;
+      margin: 80px 0;
 
       img {
         width: 85px;
@@ -27,6 +30,7 @@
         font-weight: 300;
         letter-spacing: 0;
         color: #ffffdb;
+        text-align: center;
       }
     }
   }
