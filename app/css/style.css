@@ -751,7 +751,7 @@ html {
     align-self: center; }
   html body .video section iframe {
     width: 100%;
-    height: 50vw; } }
+    height: calc((100vw - 30px) * 0.65); } }
 @media (max-width: 850px) {
   html body .course section {
     flex-direction: column;
@@ -894,12 +894,13 @@ html {
     max-width: 260px;
     line-height: 22px; }
   html body .cite section {
-    padding: 30px 15px 0; }
+    padding: 30px 15px 0;
+    min-height: 486px; }
     html body .cite section h2 {
       font-size: 24px; }
     html body .cite section blockquote {
       max-width: 100%;
-      margin: 10px 0 0; }
+      margin: 10px 0 93px; }
       html body .cite section blockquote p {
         width: 260px;
         margin: 0 auto;
@@ -918,4 +919,9 @@ html {
         html body .cite section blockquote figcaption p span:first-child {
           font-size: 14px; }
         html body .cite section blockquote figcaption p span:last-child {
-          margin: 0; } }
+          margin: 0; }
+  html body .video section h2 {
+    font-size: 24px; }
+  html body .video section p {
+    font-size: 16px;
+    line-height: 22px; } }
