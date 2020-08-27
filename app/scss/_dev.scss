@@ -19,13 +19,14 @@
       // text-align: center;
 
       .dev_item + .dev_item {
-        padding-left: 15px;
+        // padding-left: 15px;
       }
 
       .dev_item {
         // @include flex($dir: column, $jus: flex-start, $align: center);
         // padding: 0 26px;
-        // display: inline-block;
+        margin: 0 5px;
+        display: inline-block;
         min-width: 0;
         // min-width: 400px;
         text-align: center;
