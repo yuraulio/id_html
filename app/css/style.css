@@ -778,6 +778,8 @@ html {
   html body .dev .dev_items .dev_item {
     min-width: 300px; } }
 @media (max-width: 685px) {
+  html body .anchor #dev, html body .anchor #cite, html body .anchor #video, html body .anchor #mentors {
+    top: -70px; }
   html body .header {
     height: 70px; }
     html body .header header {
@@ -977,4 +979,6 @@ html {
     font-size: 24px; }
   html body .video section p {
     font-size: 16px;
-    line-height: 22px; } }
+    line-height: 22px; }
+  html body .footer footer {
+    height: 110px; } }
