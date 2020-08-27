@@ -699,7 +699,7 @@ html {
           flex-direction: column;
           justify-content: flex-start;
           align-items: center;
-          width: 305px;
+          width: calc((100vw - 30px) / 4);
           height: 192px;
           color: white; }
           html body .contact section .contact_item img {
@@ -847,7 +847,34 @@ html {
     html body .stat section .stat_item:nth-child(3) {
       margin: 0 0 26px; }
     html body .stat section .stat_item:nth-child(4) {
-      margin: 7px 0 0; } }
+      margin: 7px 0 0; }
+  html body .contact {
+    height: 268px; }
+    html body .contact section {
+      height: 268px;
+      flex-wrap: wrap;
+      align-items: center; }
+      html body .contact section .contact_item {
+        width: calc((100vw - 30px) / 2);
+        height: 86px; }
+        html body .contact section .contact_item img {
+          margin-top: 0;
+          margin-bottom: 10px;
+          width: 35px;
+          height: 35px; }
+        html body .contact section .contact_item span {
+          font-size: 14px;
+          font-weight: 600; }
+        html body .contact section .contact_item a {
+          margin-top: 5px;
+          font-size: 12px;
+          font-weight: 300;
+          letter-spacing: 0;
+          color: white; }
+      html body .contact section .contact_item:nth-child(-n+2) {
+        margin-top: 29px; }
+      html body .contact section .contact_item:nth-child(n+3) {
+        margin-bottom: 22px; } }
 @media (max-width: 529px) {
   html body .course section .course_description h2 {
     font-size: 30px; }

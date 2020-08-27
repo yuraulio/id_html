@@ -243,6 +243,47 @@
           }
         }
       }
+
+      .contact {
+        height: 268px;
+
+        section {
+          height: 268px;
+          flex-wrap: wrap;
+          align-items: center;
+          .contact_item {
+            width: calc((100vw - 30px) / 2);
+            height: 86px;
+
+            img {
+                margin-top: 0;
+                margin-bottom: 10px;
+                width: 35px;
+                height: 35px;
+            }
+
+            span {
+              font-size: 14px;
+              font-weight: 600;
+            }
+
+            a {
+              margin-top: 5px;
+              font-size: 12px;
+              font-weight: 300;
+              letter-spacing: 0;
+              color: white;
+            }
+          }
+
+          .contact_item:nth-child(-n+2) {
+            margin-top: 29px;
+          }
+          .contact_item:nth-child(n+3) {
+            margin-bottom: 22px;
+          }
+        }
+      }
     }
   }
 }

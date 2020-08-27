@@ -13939,7 +13939,7 @@ $(document).ready(function(){
     infinite: true,
     arrows: false,
     slidesToShow: 1,
-    autoplay: false,
+    autoplay: true,
     autoplaySpeed: 10000
   });
 });

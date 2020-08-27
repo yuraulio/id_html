@@ -11,7 +11,7 @@
 
     .contact_item {
       @include flex($dir: column, $jus: flex-start, $align: center);
-      width: 305px;
+      width: calc((100vw - 30px) / 4);
       height: 192px;
       color: white;
 
