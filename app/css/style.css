@@ -657,8 +657,8 @@ html {
           align-items: flex-start; }
           html body .mentors section .mentors_item_wrapper .mentors_item img {
             margin-left: 75px;
-            width: 337px;
-            height: 356px; }
+            width: 27.6%;
+            height: 25%; }
           html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc {
             margin-top: 32px;
             margin-right: 22px;
@@ -669,7 +669,8 @@ html {
               padding: 0 0 15px;
               color: #3498db;
               border-bottom: 1px solid #f7f7f7;
-              letter-spacing: 0.05em; }
+              letter-spacing: 0.05em;
+              text-align: center; }
             html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc p {
               margin: 13px 0;
               font-size: 16px;
@@ -851,7 +852,32 @@ html {
   html body .course section .course_description h2 {
     font-size: 30px; }
   html body .course section .course_description p {
-    width: calc(100% - 30px); } }
+    width: calc(100% - 30px); }
+  html body .mentors section {
+    flex-direction: column;
+    padding: 30px 15px 19px; }
+    html body .mentors section h2 {
+      font-size: 24px; }
+    html body .mentors section .mentors_item_wrapper .mentors_item {
+      flex-direction: column; }
+      html body .mentors section .mentors_item_wrapper .mentors_item img {
+        margin: 0 auto;
+        width: 145px;
+        height: 153px; }
+      html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc {
+        width: 100%;
+        margin: 0;
+        padding: 0; }
+        html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc h3 {
+          font-size: 18px;
+          letter-spacing: 0;
+          margin: 20px 0;
+          padding: 0; }
+        html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc p {
+          margin: 0 0 10px;
+          font-size: 14px;
+          text-align: center;
+          line-height: 22px; } }
 @media (max-width: 429px) {
   html body .course section .course_description {
     padding-top: 22px; }

@@ -263,6 +263,48 @@
           }
         }
       }
+
+      .mentors {
+        section {
+          flex-direction: column;
+          padding: 30px 15px 19px;
+
+          h2 {
+            font-size: 24px;
+          }
+          .mentors_item_wrapper {
+            .mentors_item {
+              flex-direction: column;
+
+              img {
+                margin: 0 auto;
+                width: 145px;
+                height: 153px;
+              }
+
+              .mentors_desc {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+
+                h3 {
+                  font-size: 18px;
+                  letter-spacing: 0;
+                  margin: 20px 0;
+                  padding: 0;
+                }
+
+                p {
+                  margin: 0 0 10px;
+                  font-size: 14px;
+                  text-align: center;
+                  line-height: 22px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
