@@ -9,7 +9,6 @@ html {
   @include font();
   body {
     @include font();
-    // background-color: blue;
     @include flex($dir: column, $align: center);
     margin: 0px;
 

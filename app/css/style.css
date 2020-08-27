@@ -534,7 +534,8 @@ html {
               letter-spacing: 0.001em;
               line-height: 25px; }
     html body .slick-slide {
-      float: none; }
+      float: none;
+      outline: none; }
     html body .slick-track {
       display: flex;
       justify-content: center;

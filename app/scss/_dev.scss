@@ -2,8 +2,6 @@
   width: 100%;
 
   section {
-    // @include flex($dir: column, $jus: flex-start, $align: center);
-    // min-height: 500px;
     @include content_block();
     padding: 65px 15px 60px;
 
@@ -13,25 +11,15 @@
     }
 
     .dev_items {
-      // display: inline-block;
       margin-bottom: 30px;
       width: 100%;
-      // text-align: center;
-
-      .dev_item + .dev_item {
-        // padding-left: 15px;
-      }
 
       .dev_item {
-        // @include flex($dir: column, $jus: flex-start, $align: center);
-        // padding: 0 26px;
         margin: 0 5px;
         display: inline-block;
         min-width: 0;
-        // min-width: 400px;
         text-align: center;
         vertical-align: top;
-        // background-color: blue;
 
         img {
           display: block;
@@ -68,6 +56,7 @@
 
 .slick-slide {
   float: none;
+  outline: none
 }
 .slick-track {
   display: flex;
