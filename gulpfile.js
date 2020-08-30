@@ -61,12 +61,20 @@ function css() {
     .pipe(rename('style.css'))
     .pipe(dest(path.dist.style))
     .pipe(src("node_modules/bootstrap/dist/css/bootstrap.css"))
+    .pipe(dest(path.dist.style))
+    .pipe(src("node_modules/bootstrap/dist/css/bootstrap.css.map"))
     .pipe(dest(path.dist.style));
 }
 
 function js() {
   return src(path.app.js)
         .pipe(rigger())
+        .pipe(dest(path.dist.js))
+        .pipe(src('node_modules/jquery/dist/jquery.js'))
+        .pipe(dest(path.dist.js))
+        .pipe(src('node_modules/bootstrap/dist/js/bootstrap.bundle.js'))
+        .pipe(dest(path.dist.js))
+        .pipe(src('node_modules/bootstrap/dist/js/bootstrap.bundle.js.map'))
         .pipe(dest(path.dist.js));
 }
 
@@ -91,12 +99,11 @@ exports.fonts = fonts;
 exports.build = series(clean, parallel(html, css, js, img, fonts));
 exports.clean = clean;
 exports.bs = browserSyncInit;
-exports.default = function() {
-  series(exports.build); // Збираємо проект (запхано у series, щоб наступна команда виконувалась точно після завершення цієї)
+exports.default = series(exports.build, function() {
   browserSyncInit();
   watch(path.app.html).on('change', html);
   watch(path.app.style).on('change', css);
   watch(path.app.js).on('change', js);
   watch(path.app.img).on('change', img);
   watch(path.app.fonts).on('change', fonts);
-}
+});
