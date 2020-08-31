@@ -6,10 +6,12 @@
 
 .header {
   height: 95px;
+
   a {
     display: flex;
     align-items: center;
     text-decoration: none;
+    position: relative;
 
     p:first-child {
       font-family: 'Quicksand';
@@ -31,18 +33,25 @@
       color: rgba(255, 255, 255, 0.302);
     }
   }
+
+  a:hover:after {
+    display: block;
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translate(-22px);
+    content: url('../images/lines.svg');
+  }
 }
 
 .menu ul {
   display: flex;
   justify-content: flex-end;
+  list-style-type: none;
   margin: 0;
   padding: 0;
 
   li {
-    display: block;
-    text-align: center;
-
     a {
       font-size: 16px;
       letter-spacing: 0.02em;
@@ -51,6 +60,6 @@
   }
 
   li + li {
-    margin-left: 23px;
+    margin-left: 22px;
   }
 }
