@@ -7,11 +7,10 @@
 .header {
   height: 95px;
 
-  a {
+  div a {
     display: flex;
     align-items: center;
     text-decoration: none;
-    position: relative;
 
     p:first-child {
       font-family: 'Quicksand';
@@ -33,15 +32,6 @@
       color: rgba(255, 255, 255, 0.302);
     }
   }
-
-  a:hover:after {
-    display: block;
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translate(-22px);
-    content: url('../images/lines.svg');
-  }
 }
 
 .menu ul {
@@ -53,9 +43,20 @@
 
   li {
     a {
+      position: relative;
       font-size: 16px;
       letter-spacing: 0.02em;
       color: #fffefe;
+      text-decoration: none;
+    }
+
+    a:hover:after {
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 50%;
+      transform: translate(-22px);
+      content: url('../images/lines.svg');
     }
   }
 
