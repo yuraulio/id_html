@@ -100,9 +100,9 @@ exports.clean = clean;
 exports.bs = browserSyncInit;
 exports.default = series(exports.build, function() {
   browserSyncInit();
-  watch(path.app.html).on('change', html);
-  watch(path.app.style).on('change', css);
-  watch(path.app.js).on('change', js);
-  watch(path.app.img).on('change', img);
-  watch(path.app.fonts).on('change', fonts);
+  watch(path.app.html).on('all', html);
+  watch('app/scss/**/*.scss').on('all', css);
+  watch(path.app.js).on('all', js);
+  watch(path.app.img).on('all', img);
+  watch(path.app.fonts).on('all', fonts);
 });

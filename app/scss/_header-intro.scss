@@ -1,0 +1,56 @@
+.header-intro {
+  height: 640px;
+  background-image: url('../images/intro_background.png');
+  background-size: cover;
+}
+
+.header {
+  height: 95px;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    p:first-child {
+      font-family: 'Quicksand';
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    p:last-child {
+      margin-left: 4px;
+      align-self: center;
+      font-size: 9px;
+      line-height: 10px;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.302);
+    }
+  }
+}
+
+.menu ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+
+  li {
+    display: block;
+    text-align: center;
+
+    a {
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      color: #fffefe;
+    }
+  }
+
+  li + li {
+    margin-left: 23px;
+  }
+}
