@@ -9,7 +9,7 @@ const {
   } = require('gulp');
 
 // Підключаємо потрібні для роботи модулі gulp
-var scss = require('gulp-scss'),
+var scss = require('gulp-sass'),
     notify = require('gulp-notify'),
     concat = require('gulp-concat'),
     prefix = require('gulp-autoprefixer'),
@@ -17,6 +17,9 @@ var scss = require('gulp-scss'),
     rename = require('gulp-rename'),
     del = require('del'),
     browserSync = require('browser-sync').create();
+
+
+    scss.compiler = require('node-sass');
 
 //  Шляхи до робочих директорій
 var path = {
@@ -55,14 +58,10 @@ function css() {
     .pipe(scss().on('error', notify.onError(
       {
         message: "<%= error.message %>",
-        title  : "SCSS cimpile Error!"
+        title  : "SCSS compile Error!"
       })))
     .pipe(prefix())
     .pipe(rename('style.css'))
-    .pipe(dest(path.dist.style))
-    .pipe(src("node_modules/bootstrap/dist/css/bootstrap.css"))
-    .pipe(dest(path.dist.style))
-    .pipe(src("node_modules/bootstrap/dist/css/bootstrap.css.map"))
     .pipe(dest(path.dist.style));
 }
 
