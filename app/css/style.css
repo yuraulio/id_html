@@ -1,818 +1,375 @@
-@charset "UTF-8";
-/* Slider */
-.slick-slider {
-  position: relative;
-  display: block;
-  box-sizing: border-box;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent; }
-
-.slick-list {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  margin: 0;
-  padding: 0; }
-  .slick-list:focus {
-    outline: none; }
-  .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand; }
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0); }
-
-.slick-track {
-  position: relative;
-  left: 0;
-  top: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; }
-  .slick-track:before, .slick-track:after {
-    content: "";
-    display: table; }
-  .slick-track:after {
-    clear: both; }
-  .slick-loading .slick-track {
-    visibility: hidden; }
-
-.slick-slide {
-  float: left;
-  height: 100%;
-  min-height: 1px;
-  display: none; }
-  [dir="rtl"] .slick-slide {
-    float: right; }
-  .slick-slide img {
-    display: block; }
-  .slick-slide.slick-loading img {
-    display: none; }
-  .slick-slide.dragging img {
-    pointer-events: none; }
-  .slick-initialized .slick-slide {
-    display: block; }
-  .slick-loading .slick-slide {
-    visibility: hidden; }
-  .slick-vertical .slick-slide {
-    display: block;
-    height: auto;
-    border: 1px solid transparent; }
-
-.slick-arrow.slick-hidden {
-  display: none; }
-
-/* Slider */
-.slick-loading .slick-list {
-  background: #fff "..images/ajax-loader.gif" center center no-repeat; }
-
-/* Icons */
-@font-face {
-  font-family: "slick";
-  src: url("../fonts/slick/slick.eot");
-  src: url("../fonts/slick/slick.eot?#iefix") format("embedded-opentype"), url("../fonts/slick/slick.woff") format("woff"), url("../fonts/slick/slick.ttf") format("truetype"), url("../fonts/slick/slick.svg#slick") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-/* Arrows */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  display: block;
-  height: 20px;
-  width: 20px;
-  line-height: 0px;
-  font-size: 0px;
-  cursor: pointer;
-  background: transparent;
-  color: transparent;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
-  padding: 0;
-  border: none;
-  outline: none; }
-  .slick-prev:hover, .slick-prev:focus,
-  .slick-next:hover,
-  .slick-next:focus {
-    outline: none;
-    background: transparent;
-    color: transparent; }
-    .slick-prev:hover:before, .slick-prev:focus:before,
-    .slick-next:hover:before,
-    .slick-next:focus:before {
-      opacity: 1; }
-  .slick-prev.slick-disabled:before,
-  .slick-next.slick-disabled:before {
-    opacity: 0.25; }
-  .slick-prev:before,
-  .slick-next:before {
-    font-family: "slick";
-    font-size: 20px;
-    line-height: 1;
-    color: white;
-    opacity: 0.75;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale; }
-
-.slick-prev {
-  left: -25px; }
-  [dir="rtl"] .slick-prev {
-    left: auto;
-    right: -25px; }
-  .slick-prev:before {
-    content: "←"; }
-    [dir="rtl"] .slick-prev:before {
-      content: "→"; }
-
-.slick-next {
-  right: -25px; }
-  [dir="rtl"] .slick-next {
-    left: -25px;
-    right: auto; }
-  .slick-next:before {
-    content: "→"; }
-    [dir="rtl"] .slick-next:before {
-      content: "←"; }
-
-/* Dots */
-.slick-dotted.slick-slider {
-  margin-bottom: 30px; }
-
-.slick-dots {
-  position: absolute;
-  bottom: -25px;
-  list-style: none;
-  display: block;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-  width: 100%; }
-  .slick-dots li {
-    position: relative;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    margin: 0 5px;
-    padding: 0;
-    cursor: pointer; }
-    .slick-dots li button {
-      border: 0;
-      background: transparent;
-      display: block;
-      height: 20px;
-      width: 20px;
-      outline: none;
-      line-height: 0px;
-      font-size: 0px;
-      color: transparent;
-      padding: 5px;
-      cursor: pointer; }
-      .slick-dots li button:hover, .slick-dots li button:focus {
-        outline: none; }
-        .slick-dots li button:hover:before, .slick-dots li button:focus:before {
-          opacity: 1; }
-      .slick-dots li button:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "•";
-        width: 20px;
-        height: 20px;
-        font-family: "slick";
-        font-size: 6px;
-        line-height: 20px;
-        text-align: center;
-        color: black;
-        opacity: 0.25;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale; }
-    .slick-dots li.slick-active button:before {
-      color: black;
-      opacity: 0.75; }
-
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
+  src: url("../fonts/OpenSans-Regular.ttf");
   font-style: normal;
   font-weight: normal; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-Bold.ttf");
+  src: url("../fonts/OpenSans-Bold.ttf");
   font-style: normal;
   font-weight: 700; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-BoldItalic.ttf");
+  src: url("../fonts/OpenSans-BoldItalic.ttf");
   font-style: italic;
   font-weight: 700; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-ExtraBold.ttf");
+  src: url("../fonts/OpenSans-ExtraBold.ttf");
   font-style: normal;
   font-weight: 800; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-ExtraBoldItalic.ttf");
+  src: url("../fonts/OpenSans-ExtraBoldItalic.ttf");
   font-style: italic;
   font-weight: 800; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-Italic.ttf");
+  src: url("../fonts/OpenSans-Italic.ttf");
   font-style: italic;
   font-weight: 400; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-Light.ttf");
+  src: url("../fonts/OpenSans-Light.ttf");
   font-style: normal;
   font-weight: 300; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-LightItalic.ttf");
+  src: url("../fonts/OpenSans-LightItalic.ttf");
   font-style: italic;
   font-weight: 300; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-SemiBold.ttf");
+  src: url("../fonts/OpenSans-SemiBold.ttf");
   font-style: normal;
   font-weight: 600; }
 @font-face {
   font-family: 'Open Sans';
-  src: url("../fonts/OpenSans/OpenSans-SemiBoldItalic.ttf");
+  src: url("../fonts/OpenSans-SemiBoldItalic.ttf");
   font-style: italic;
   font-weight: 600; }
-@font-face {
-  font-family: 'Awesome';
-  src: url("../fonts/fa-solid-900.ttf");
-  font-style: normal;
-  font-weight: 900; }
-html {
+html body {
+  margin: 0px;
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  color: #666666; }
-  html body {
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  color: #777777; }
+  html body a {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    color: #666666;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0px; }
-    html body a {
-      font-family: 'Open Sans', sans-serif;
-      font-size: 16px;
-      color: #666666;
-      text-decoration: none; }
-    html body h2 {
-      margin: 0;
-      font-size: 34px;
-      font-family: 'Open Sans';
-      font-weight: 400;
-      color: #333333;
-      text-align: center; }
-    html body .anchor {
-      position: relative; }
-      html body .anchor #c_reg, html body .anchor #dev, html body .anchor #cite, html body .anchor #video, html body .anchor #mentors {
-        position: absolute;
-        top: -100px; }
-    html body .slick-dots li {
-      margin: 0 3px; }
-      html body .slick-dots li button:before {
-        font-size: 14px; }
-    html body .header {
-      position: fixed;
-      z-index: 1;
-      width: 100%;
-      background-color: white;
-      box-shadow: 0 7px 7px 0 rgba(222, 222, 222, 0.8); }
-      html body .header header {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px;
-        height: 100px; }
-        html body .header header .logo {
-          width: 80px;
-          height: 100px; }
-          html body .header header .logo img {
-            margin: 10px 0;
-            width: 80px;
-            height: 80px; }
-        html body .header header nav {
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-start;
-          align-items: stretch;
-          margin: 0 0 0 auto;
-          background-color: white; }
-          html body .header header nav ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            margin: 0;
-            padding: 0;
-            list-style-type: none; }
-            html body .header header nav ul li {
-              display: flex; }
-              html body .header header nav ul li a {
-                padding: 10px 20px;
-                font-size: 0.875em;
-                font-weight: 300;
-                line-height: 20px;
-                letter-spacing: 0.025em; }
-              html body .header header nav ul li button {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
-                padding: 0;
-                width: 138px;
-                height: 40px;
-                border: none;
-                border-radius: 20px;
-                background-color: #337ab7;
-                font-family: 'Open Sans';
-                font-size: 14px;
-                font-weight: 300;
-                letter-spacing: 0.4px;
-                color: white;
-                outline: none; }
-              html body .header header nav ul li button:hover {
-                background-color: #3498db;
-                cursor: pointer; }
-              html body .header header nav ul li button:active {
-                background: radial-gradient(ellipse, #3498db, #337ab7); }
-              html body .header header nav ul li button:focus {
-                outline: none; }
-            html body .header header nav ul li:hover {
-              background-color: #eeeeee; }
-              html body .header header nav ul li:hover a {
-                color: #337ab7; }
-            html body .header header nav ul li:last-child {
-              padding: 0; }
-            html body .header header nav ul li:last-child:hover {
-              background-color: transparent; }
-        html body .header header #menu_button {
-          display: none;
-          outline: none; }
-    html body .course {
-      padding-top: 107px;
-      width: 100%;
-      background-color: #f7f7f7; }
-      html body .course section {
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    color: #777777;
+    text-decoration: none; }
+  html body .header {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 102px;
+    background-color: white;
+    box-shadow: 0 6px 8px 0 #e4e4e4; }
+    html body .header header {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 15px;
+      max-width: 1250px;
+      height: 102px; }
+      html body .header header .logo img {
+        margin: 11px auto;
+        width: 80px;
+        height: 80px; }
+      html body .header header nav {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: stretch;
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px; }
-        html body .course section .course_description {
-          padding-top: 192px;
-          width: 50%; }
-          html body .course section .course_description h2 {
-            letter-spacing: 0.022em; }
-          html body .course section .course_description p {
-            margin: 25px auto 0;
-            width: 500px;
-            text-align: center;
-            font-size: 18px;
-            line-height: 2rem;
-            font-weight: 300; }
-        html body .course section .course_register {
-          box-sizing: border-box;
+        margin: auto 0 auto auto;
+        background-color: white; }
+        html body .header header nav ul {
           display: flex;
-          flex-direction: column;
+          flex-direction: row;
           justify-content: flex-start;
-          align-items: stretch;
-          width: 50%;
-          padding-top: 43px;
-          padding-left: 20px; }
-          html body .course section .course_register legend {
-            align-self: flex-start;
-            margin: 0 0 12px -2px;
-            font-size: 23px;
-            font-weight: 500;
-            color: #333333; }
-          html body .course section .course_register label {
+          align-items: center;
+          margin: 0;
+          padding: 0;
+          list-style-type: none; }
+          html body .header header nav ul li {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
-            align-items: center;
-            font-size: 14px;
-            font-weight: 300;
-            color: #555555; }
-            html body .course section .course_register label span {
-              line-height: 18px;
-              letter-spacing: 0; }
-            html body .course section .course_register label span + img {
+            align-items: stretch;
+            padding: 10px 20px; }
+            html body .header header nav ul li button {
               display: flex;
-              align-self: center;
-              margin-left: 4px;
-              width: 7px;
-              height: 7px; }
-          html body .course section .course_register input {
-            box-sizing: border-box;
-            padding: 0 15px;
-            width: 100%;
-            height: 50px;
-            border-radius: 5px;
-            border: 1px solid #bababa;
-            font-family: 'Open Sans';
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              width: 140px;
+              height: 40px;
+              border: none;
+              padding: 0;
+              border-radius: 20px;
+              background-color: #337ab7;
+              font-family: 'Open Sans';
+              font-weight: 300;
+              font-size: 0.875em;
+              letter-spacing: 0.3px;
+              color: white; }
+            html body .header header nav ul li button:hover {
+              background-color: #3498db;
+              cursor: pointer; }
+            html body .header header nav ul li button:active {
+              background: radial-gradient(ellipse, #3498db, #337ab7); }
+            html body .header header nav ul li button:focus {
+              outline: none; }
+          html body .header header nav ul li:hover {
+            background-color: #eeeeee; }
+            html body .header header nav ul li:hover a {
+              color: #337ab7; }
+          html body .header header nav ul li:last-child {
+            padding: 0 0 0 0; }
+          html body .header header nav ul li:last-child:hover {
+            background-color: transparent; }
+          html body .header header nav ul a {
             font-size: 0.875em;
-            font-weight: 500;
-            color: #666666; }
-          html body .course section .course_register input:focus {
-            outline: none;
-            border: 1px solid #3498db;
-            box-shadow: 0 0 8px 0 rgba(52, 152, 219, 0.4); }
-          html body .course section .course_register label + input {
-            margin-top: 6px; }
-          html body .course section .course_register input + label {
-            margin-top: 12px; }
-          html body .course section .course_register .block_agree {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            align-items: center;
-            margin-top: 22px; }
-            html body .course section .course_register .block_agree #agree {
-              box-sizing: border-box;
-              margin: 0;
-              width: 13px;
-              height: 13px;
-              border: 1px solid; }
-            html body .course section .course_register .block_agree label {
-              margin: 0 0 0 7px;
-              font-size: 14px; }
-              html body .course section .course_register .block_agree label span a {
-                font-size: 14px;
-                letter-spacing: 0;
-                color: #337ab7; }
-              html body .course section .course_register .block_agree label span:after {
-                display: inline-block;
-                margin-left: 1px;
-                margin-bottom: 1px;
-                content: '';
-                width: 7px;
-                height: 7px;
-                background-image: url("../images/icons/required.png");
-                background-size: 7px 7px; }
-          html body .course section .course_register button {
-            margin-top: 36px;
-            margin-bottom: 30px;
-            align-self: center;
-            width: 370px;
-            height: 50px;
-            border-radius: 25px;
-            border: 0;
-            background-color: #337ab7;
-            font-family: 'Open Sans';
-            font-size: 14px;
-            text-transform: uppercase;
-            color: white; }
-          html body .course section .course_register button:hover {
-            background-color: #3498db;
-            cursor: pointer; }
-          html body .course section .course_register button:active {
-            background: radial-gradient(ellipse, #3498db, #337ab7); }
-          html body .course section .course_register button:focus {
-            outline: none; }
-    html body .dev {
-      width: 100%; }
-      html body .dev section {
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px;
-        padding: 65px 15px 60px; }
-        html body .dev section h2 {
-          margin: 0 0 30px; }
-        html body .dev section .dev_items {
-          margin-bottom: 30px;
-          width: 100%; }
-          html body .dev section .dev_items .dev_item {
-            margin: 0 5px;
-            display: inline-block;
-            min-width: 0;
-            text-align: center;
-            vertical-align: top; }
-            html body .dev section .dev_items .dev_item img {
-              display: block;
-              margin: 0 auto; }
-            html body .dev section .dev_items .dev_item h3 {
-              display: inline-block;
-              margin: 16px auto 30px;
-              padding: 0 0 17px;
-              text-align: center;
-              font-size: 24px;
-              font-weight: 300;
-              letter-spacing: 0.02em;
-              border-bottom: 1px solid #3498db; }
-            html body .dev section .dev_items .dev_item p {
-              margin: 0 auto;
-              max-width: 342px;
-              text-align: center;
-              font-size: 16px;
-              font-weight: 300;
-              letter-spacing: 0.001em;
-              line-height: 25px; }
-    html body .slick-slide {
-      float: none;
-      outline: none; }
-    html body .slick-track {
+            color: #777777; }
+      html body .header header #menu_button {
+        display: none; }
+  html body .course {
+    padding-top: 108px;
+    width: 100%;
+    background-color: #f7f7f7; }
+    html body .course section {
       display: flex;
-      justify-content: center;
-      align-items: flex-start; }
-    html body .stat {
-      width: 100%;
-      background-color: #3498db; }
-      html body .stat section {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 15px;
+      max-width: 1250px;
+      min-height: 660px; }
+      html body .course section .course_description {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 194px;
+        width: 610px; }
+        html body .course section .course_description h2 {
+          text-align: center;
+          font-size: 2.1875em;
+          font-weight: 400;
+          letter-spacing: 0.01px;
+          color: #333333;
+          margin: 0; }
+        html body .course section .course_description p {
+          margin-top: 25px;
+          max-width: 540px;
+          text-align: center;
+          font-size: 18px;
+          letter-spacing: 0;
+          line-height: 2rem; }
+      html body .course section .course_register {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 50%;
+        padding-top: 49px; }
+        html body .course section .course_register legend {
+          align-self: flex-start;
+          margin: -5px 0 12px 18px;
+          font-size: 23px;
+          font-weight: 500;
+          letter-spacing: 0;
+          color: #333333; }
+        html body .course section .course_register label {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          margin-left: 20px;
+          font-size: 14px;
+          color: #555555; }
+          html body .course section .course_register label span {
+            line-height: 18px;
+            letter-spacing: 0; }
+          html body .course section .course_register label span + img {
+            display: flex;
+            align-self: center;
+            margin-left: 4px;
+            width: 7px;
+            height: 7px; }
+        html body .course section .course_register input {
+          margin-left: 20px;
+          padding: 0 15px;
+          max-width: 100%;
+          height: 48px;
+          border-radius: 5px;
+          border-width: 1px;
+          border-color: #cccccc;
+          font-family: 'Open Sans';
+          font-weight: 500;
+          letter-spacing: 0.3px;
+          color: #777777; }
+        html body .course section .course_register input:focus {
+          outline: none;
+          border: 1px solid #3498db;
+          box-shadow: 0 0 8px 0 rgba(52, 152, 219, 0.4); }
+        html body .course section .course_register label + input {
+          margin-top: 6px; }
+        html body .course section .course_register input + label {
+          margin-top: 12px; }
+        html body .course section .course_register .block_agree {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          height: 60px; }
+          html body .course section .course_register .block_agree #agree {
+            width: 12px;
+            height: 12px; }
+          html body .course section .course_register .block_agree label {
+            margin: 0 0 0 4px;
+            font-size: 14px; }
+            html body .course section .course_register .block_agree label span a {
+              font-size: 14px;
+              letter-spacing: 0;
+              color: #337ab7; }
+            html body .course section .course_register .block_agree label img {
+              margin-left: 5px; }
+        html body .course section .course_register button {
+          margin-top: 16px;
+          margin-left: 18px;
+          align-self: center;
+          width: 370px;
+          height: 50px;
+          border-radius: 25px;
+          border: 0;
+          background-color: #337ab7;
+          text-transform: uppercase;
+          color: white; }
+        html body .course section .course_register button:hover {
+          background-color: #3498db;
+          cursor: pointer; }
+        html body .course section .course_register button:active {
+          background: radial-gradient(ellipse, #3498db, #337ab7); }
+        html body .course section .course_register button:focus {
+          outline: none; }
+  html body .dev {
+    width: 100%; }
+    html body .dev section {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 15px;
+      max-width: 1250px;
+      min-height: 565px; }
+      html body .dev section h2 {
+        margin: 67px 0 32px;
+        font-size: 34px;
+        font-family: 'Open Sans';
+        font-weight: normal;
+        letter-spacing: 0.002em;
+        color: #333333; }
+      html body .dev section .dev_items {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px; }
-        html body .stat section .stat_item {
+        align-items: flex-start;
+        width: 100%; }
+        html body .dev section .dev_items .dev_item {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
-          width: calc((100vw - 30px) / 4);
-          height: 150px;
-          margin: 80px 0; }
-          html body .stat section .stat_item img {
-            width: 85px;
-            height: 60px; }
-          html body .stat section .stat_item .stat_hours {
-            margin: 20px 0 10px;
-            font-size: 27px;
+          width: 350px; }
+          html body .dev section .dev_items .dev_item h3 {
+            margin: 15px 0;
+            padding: 0 0 17px;
+            text-align: center;
+            font-size: 24px;
             font-weight: 300;
-            color: #ffffdb; }
-          html body .stat section .stat_item .stat_desc {
+            letter-spacing: 0.45px;
+            border-bottom: 1px solid #3498db; }
+          html body .dev section .dev_items .dev_item p {
+            text-align: center;
+            font-size: 16px;
             font-weight: 300;
-            letter-spacing: 0;
-            color: #ffffdb;
-            text-align: center; }
-    html body .cite {
-      width: 100%; }
-      html body .cite section {
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px;
-        padding: 65px 15px 29px;
-        min-height: 398px; }
-        html body .cite section blockquote {
-          margin: 0 auto 107px;
-          max-width: 73.8%;
-          text-align: center;
-          color: #666666; }
-          html body .cite section blockquote > p {
-            margin-top: 24px;
-            position: relative;
-            font-size: 22px;
-            line-height: 1.7em;
-            font-weight: 300; }
-          html body .cite section blockquote > p:before {
-            position: absolute;
-            left: -38px;
-            top: -15px;
-            content: "\f10d";
-            font-family: 'Awesome';
-            font-size: 30px;
-            line-height: 30px;
-            color: #c4c4c4; }
-          html body .cite section blockquote > p:after {
-            position: absolute;
-            right: -38px;
-            bottom: -4px;
-            content: "\f10e";
-            font-family: 'Awesome';
-            font-size: 30px;
-            color: #c4c4c4; }
-          html body .cite section blockquote > p:after:hover {
-            color: red; }
-          html body .cite section blockquote figcaption {
-            margin-top: 30px; }
-            html body .cite section blockquote figcaption > p {
-              display: flex;
-              flex-direction: column;
-              justify-content: flex-start;
-              align-items: center; }
-              html body .cite section blockquote figcaption > p span:first-child {
-                font-size: 20px;
-                font-weight: 400;
-                letter-spacing: 0.001em; }
-              html body .cite section blockquote figcaption > p span:last-child {
-                margin-top: 3px;
-                font-family: sans-serif;
-                font-style: italic;
-                font-weight: 300;
-                letter-spacing: 0.01em; }
-    html body .video {
-      width: 100%;
-      background-color: #f7f7f7; }
-      html body .video section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px;
-        padding: 65px 15px; }
-        html body .video section h2 {
-          margin: 0 0 18px; }
-        html body .video section p {
-          margin: 2px 0 30px;
-          text-align: center;
-          font-size: 18px;
-          line-height: 24px;
-          font-weight: 300;
-          letter-spacing: 0; }
-    html body .mentors {
-      width: 100%; }
-      html body .mentors section {
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px;
-        padding: 65px 15px 55px; }
-        html body .mentors section .mentors_item_wrapper .mentors_item {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: flex-start; }
-          html body .mentors section .mentors_item_wrapper .mentors_item img {
-            margin-left: 75px;
-            width: 27.6%;
-            height: 25%; }
-          html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc {
-            margin-top: 32px;
-            margin-right: 22px;
-            padding-left: 50px;
-            width: 680px; }
-            html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc h3 {
-              margin: 0 0 30px;
-              padding: 0 0 15px;
-              color: #3498db;
-              border-bottom: 1px solid #f7f7f7;
-              letter-spacing: 0.05em; }
-            html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc p {
-              margin: 13px 0;
-              font-size: 16px;
-              line-height: 24px;
-              font-weight: 300;
-              letter-spacing: 0; }
-    html body .map {
-      width: 100%; }
-      html body .map section {
-        height: 400px; }
-    html body .contact {
-      width: 100%;
-      height: 196px;
-      background-color: #3498db; }
-      html body .contact section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px;
-        height: 192px; }
-        html body .contact section .contact_item {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-start;
-          align-items: center;
-          width: calc((100vw - 30px) / 4);
-          height: 192px;
-          color: white; }
-          html body .contact section .contact_item img {
-            margin-top: 40px;
-            margin-bottom: 20px;
-            width: 50px;
-            height: 50px; }
-          html body .contact section .contact_item span {
-            font-weight: 600; }
-          html body .contact section .contact_item a {
-            margin-top: 5px;
-            font-size: 14px;
-            font-weight: 300;
-            letter-spacing: 0;
-            color: white; }
-          html body .contact section .contact_item a:hover {
-            text-decoration: underline; }
-    html body .footer {
-      width: 100%;
-      background-color: #f7f7f7; }
-      html body .footer footer {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0 15px;
-        max-width: 1220px;
-        height: 154px;
-        font-size: 14px;
-        letter-spacing: 0; }
-        html body .footer footer span:first-child {
-          font-weight: 300;
-          color: #3498db;
-          line-height: 36px; }
-        html body .footer footer span:last-child a {
-          font-size: 14px;
-          line-height: 36px;
-          font-weight: 300; }
-        html body .footer footer span:last-child a:hover {
-          text-decoration: underline; }
-
-@media (max-width: 1020px) {
-  html body .course section .course_description h2 {
-    font-size: 32px; }
-  html body .course section .course_description p {
-    font-size: 16px;
-    width: 100%; }
-  html body .course section .course_register legend {
-    align-self: center; }
-  html body .video section iframe {
+            letter-spacing: 0.001em;
+            line-height: 25px; }
+  html body .stat {
     width: 100%;
-    height: calc((100vw - 30px) * 0.65); } }
-@media (max-width: 850px) {
-  html body .course section {
-    flex-direction: column;
-    align-items: center; }
-    html body .course section .course_description {
-      width: 100%;
-      padding-top: 30px; }
-      html body .course section .course_description p {
-        width: 500px; }
-    html body .course section .course_register {
-      padding-left: 0;
-      width: 400px; }
-      html body .course section .course_register legend {
-        align-self: center; }
-      html body .course section .course_register input {
-        width: 100%; } }
+    background-color: #3498db; }
+    html body .stat section {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      box-sizing: border-box;
+      margin: 0 auto;
+      padding: 0 15px;
+      max-width: 1250px;
+      min-height: 310px; }
+      html body .stat section .stat_item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 305px; }
+        html body .stat section .stat_item img {
+          width: 85px;
+          height: 60px; }
+        html body .stat section .stat_item .stat_hours {
+          margin: 20px 0 10px;
+          font-size: 27px;
+          font-weight: 300;
+          color: #ffffdb; }
+        html body .stat section .stat_item .stat_desc {
+          font-weight: 300;
+          letter-spacing: 0;
+          color: #ffffdb; }
+
 @media (max-width: 825px) {
-  html body .header header nav ul li a {
+  html body .wrap_header header nav ul li {
     padding: 10px 10px; } }
 @media (max-width: 725px) {
-  html body .header header nav ul li a {
-    padding: 10px 5px; }
-  html body .dev .dev_items .dev_item {
-    min-width: 300px; } }
+  html body .wrap_header header nav ul li {
+    padding: 10px 5px; } }
 @media (max-width: 685px) {
-  html body .anchor #c_reg, html body .anchor #dev, html body .anchor #cite, html body .anchor #video, html body .anchor #mentors {
-    top: -70px; }
-  html body .header {
+  html body .wrap_header {
     height: 70px; }
-    html body .header header {
+    html body .wrap_header header {
       height: 70px; }
-      html body .header header .logo {
+      html body .wrap_header header .logo img {
+        margin: 5px auto;
         width: 60px;
-        height: 70px; }
-        html body .header header .logo img {
-          margin: 5px auto;
-          width: 60px;
-          height: 60px; }
-      html body .header header nav {
+        height: 60px; }
+      html body .wrap_header header nav {
         display: none;
         position: fixed;
-        top: 66px;
+        top: 70px;
         left: 0;
         z-index: 2;
         width: 100%; }
-        html body .header header nav ul {
+        html body .wrap_header header nav ul {
           flex-direction: column; }
-          html body .header header nav ul li a {
+          html body .wrap_header header nav ul li {
             padding: 10px 20px; }
-          html body .header header nav ul li button {
-            margin-top: -2px; }
-          html body .header header nav ul li:last-child {
+          html body .wrap_header header nav ul li:last-child {
             padding: 2px 0 16px 0; }
-      html body .header header .open_menu {
+      html body .wrap_header header .open_menu {
         display: block; }
-      html body .header header #menu_button {
+      html body .wrap_header header #menu_button {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -824,166 +381,14 @@ html {
         background-color: #337ab7;
         border: none;
         border-radius: 3px; }
-        html body .header header #menu_button div {
+        html body .wrap_header header #menu_button div {
           margin: 2px auto;
           width: 22px;
           height: 2px;
           background-color: white; }
-      html body .header header #menu_button:hover {
+      html body .wrap_header header #menu_button:hover {
         background-color: #3498db; }
-      html body .header header #menu_button:active {
+      html body .wrap_header header #menu_button:active {
         background: radial-gradient(ellipse, #3498db, #337ab7); }
-  html body .course {
-    padding-top: 78px; }
-  html body .stat section {
-    height: 340px;
-    flex-wrap: wrap;
-    align-items: stretch; }
-    html body .stat section .stat_item {
-      width: calc((100vw - 30px) / 2);
-      height: 100px;
-      margin: 0; }
-      html body .stat section .stat_item .stat_hours {
-        margin: 5px 0 5px;
-        font-size: 16px; }
-      html body .stat section .stat_item .stat_desc {
-        font-size: 12px; }
-    html body .stat section .stat_item:nth-child(-n+2) {
-      margin: 44px 0 0; }
-    html body .stat section .stat_item:nth-child(3) {
-      margin: 0 0 26px; }
-    html body .stat section .stat_item:nth-child(4) {
-      margin: 7px 0 0; }
-  html body .contact {
-    height: 268px; }
-    html body .contact section {
-      height: 268px;
-      flex-wrap: wrap;
-      align-items: center; }
-      html body .contact section .contact_item {
-        width: calc((100vw - 30px) / 2);
-        height: 86px; }
-        html body .contact section .contact_item img {
-          margin-top: 0;
-          margin-bottom: 10px;
-          width: 35px;
-          height: 35px; }
-        html body .contact section .contact_item span {
-          font-size: 14px;
-          font-weight: 600; }
-        html body .contact section .contact_item a {
-          margin-top: 5px;
-          font-size: 12px;
-          font-weight: 300;
-          letter-spacing: 0;
-          color: white; }
-      html body .contact section .contact_item:nth-child(-n+2) {
-        margin-top: 29px; }
-      html body .contact section .contact_item:nth-child(n+3) {
-        margin-bottom: 22px; } }
-@media (max-width: 529px) {
-  html body .course section .course_description h2 {
-    font-size: 30px; }
-  html body .course section .course_description p {
-    width: calc(100% - 30px); }
-  html body .mentors section {
-    flex-direction: column;
-    padding: 30px 15px 19px; }
-    html body .mentors section h2 {
-      font-size: 24px; }
-    html body .mentors section .mentors_item_wrapper .mentors_item {
-      flex-direction: column; }
-      html body .mentors section .mentors_item_wrapper .mentors_item img {
-        margin: 0 auto;
-        width: 145px;
-        height: 153px; }
-      html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc {
-        width: 100%;
-        margin: 0;
-        padding: 0; }
-        html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc h3 {
-          font-size: 18px;
-          letter-spacing: 0;
-          margin: 20px 0;
-          padding: 0;
-          text-align: center; }
-        html body .mentors section .mentors_item_wrapper .mentors_item .mentors_desc p {
-          margin: 0 0 10px;
-          font-size: 14px;
-          text-align: center;
-          line-height: 22px; } }
-@media (max-width: 429px) {
-  html body .course section .course_description {
-    padding-top: 22px; }
-    html body .course section .course_description h2 {
-      font-size: 24px; }
-    html body .course section .course_description p {
-      margin: 16px auto 0;
-      width: 100%;
-      font-size: 14px;
-      line-height: 25px; }
-  html body .course section .course_register {
-    width: 100%; }
-    html body .course section .course_register legend {
-      margin: 5px 0 13px;
-      padding: 0; }
-    html body .course section .course_register input {
-      width: 100%;
-      height: 42px;
-      padding: 0 10px; }
-    html body .course section .course_register input + label {
-      margin-top: 10px; }
-    html body .course section .course_register .block_agree {
-      margin-top: 20px; }
-      html body .course section .course_register .block_agree #agree {
-        width: 15px;
-        height: 15px; }
-    html body .course section .course_register button {
-      width: 278px;
-      padding: 0; }
-  html body .dev section h2 {
-    font-size: 24px; }
-  html body .dev section .dev_items .dev_item h3 {
-    font-size: 21px;
-    padding: 0;
-    margin: 16px auto 13px; }
-  html body .dev section .dev_items .dev_item p {
-    margin: 0 auto 42px;
-    width: 300px;
-    font-size: 14px;
-    max-width: 260px;
-    line-height: 22px; }
-  html body .cite section {
-    padding: 30px 15px 0;
-    min-height: 486px; }
-    html body .cite section h2 {
-      font-size: 24px; }
-    html body .cite section blockquote {
-      max-width: 100%;
-      margin: 10px 0 93px; }
-      html body .cite section blockquote p {
-        width: 260px;
-        margin: 0 auto;
-        font-size: 14px;
-        line-height: 21px; }
-      html body .cite section blockquote p:before {
-        font-size: 14px;
-        left: -15px;
-        top: -2px; }
-      html body .cite section blockquote p:after {
-        font-size: 14px;
-        right: -15px;
-        bottom: 6px; }
-      html body .cite section blockquote figcaption {
-        margin-top: 16px; }
-        html body .cite section blockquote figcaption p span:first-child {
-          font-size: 14px; }
-        html body .cite section blockquote figcaption p span:last-child {
-          margin: 0; }
-  html body .video section h2 {
-    font-size: 24px; }
-  html body .video section p {
-    font-size: 16px;
-    line-height: 22px; }
-  html body .footer footer {
-    height: 110px; } }
+  html body .wrap_course {
+    padding-top: 78px; } }

@@ -2,45 +2,38 @@
   width: 100%;
 
   section {
+    @include flex($dir: column, $jus: flex-start, $align: center);
     @include content_block();
-    padding: 65px 15px 60px;
-
+    min-height: 565px;
 
     h2 {
-      margin: 0 0 30px;
+      margin: 67px 0 32px;
+      font-size: 34px;
+      font-family: 'Open Sans';
+      font-weight: normal;
+      letter-spacing: 0.002em;
+      color: $header;
     }
 
     .dev_items {
-      margin-bottom: 30px;
+      @include flex($jus: space-around, $align: flex-start);
       width: 100%;
 
       .dev_item {
-        margin: 0 5px;
-        display: inline-block;
-        min-width: 0;
-        text-align: center;
-        vertical-align: top;
-
-        img {
-          display: block;
-          margin: 0 auto;
-        }
+        @include flex($dir: column, $jus: center, $align: center);
+        width: 350px;
 
         h3 {
-          display: inline-block;
-          margin: 16px auto 30px;
+          margin: 15px 0;
           padding: 0 0 17px;
           text-align: center;
           font-size: 24px;
           font-weight: 300;
-          letter-spacing: 0.02em;
+          letter-spacing: 0.45px;
           border-bottom: 1px solid $blue;
-
         }
 
         p {
-          margin: 0 auto;
-          max-width: 342px;
           text-align: center;
           font-size: 16px;
           font-weight: 300;
@@ -48,18 +41,6 @@
           line-height: 25px;
         }
       }
-
-
     }
   }
-}
-
-.slick-slide {
-  float: none;
-  outline: none
-}
-.slick-track {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
 }

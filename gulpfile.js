@@ -1,7 +1,6 @@
-const {src, dest, watch, series} = require('gulp');
+const {src, dest, watch} = require('gulp');
 var gulp_scss = require('gulp-scss');
 var notify = require('gulp-notify');
-var concat = require('gulp-concat');
 var browserSync = require('browser-sync').create();
 
 function syncInit() {
@@ -24,18 +23,15 @@ function scss() {
 }
 
 function  build() {
-  return src('app/js/src/*.js')
-    .pipe(concat('scripts.js'))
-    .pipe(dest('app/js/'));
+  return src('app/**/*')
+    .pipe(dest('dist'));
 }
 
 exports.scss = scss;
 exports.build = build;
 exports.default = function() {
   syncInit();
-  watch('app/*.html').on('change', browserSync.reload);
-  watch('app/scss/*.scss').on('change', scss);
-  watch('app/js/src/*.js').on('change',
-  series(build, browserSync.reload));
+  watch('app/scss/*.scss', scss);
+  watch(['app/*.html', 'app/js/*.js']).on('change', browserSync.reload);
 
 }
